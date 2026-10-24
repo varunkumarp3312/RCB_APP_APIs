@@ -1,0 +1,19 @@
+{
+  "name": "rcb-player-api-cucumber",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cucumber BDD automation for the RCB player API Postman collection",
+  "scripts": {
+    "test": "node scripts/run-api-tests.js",
+    "test:framework": "node --test",
+    "test:readonly": "node scripts/run-api-tests.js",
+    "test:all": "node scripts/run-api-tests.js --allow-writes --suite all",
+    "test:app": "node scripts/run-api-tests.js --suite app",
+    "test:legacy": "node scripts/run-api-tests.js --suite legacy",
+    "report:regression": "node scripts/generate-regression-deliverables.js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "pdfkit": "^0.17.2"
+  }
+}

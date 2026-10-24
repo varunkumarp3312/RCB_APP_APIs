@@ -1,0 +1,3 @@
+node_modules/
+features/generated-api.feature
+reports/api-execution-report.json
