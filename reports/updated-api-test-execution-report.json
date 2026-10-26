@@ -1,0 +1,701 @@
+{
+  "date": "2026-10-26T08:07:57.639Z",
+  "target": "https://api.rcbmatka.com",
+  "summary": {
+    "total": 57,
+    "passed": 57,
+    "failed": 0,
+    "notRun": 0,
+    "httpStatuses": {
+      "200": 48,
+      "400": 1,
+      "401": 3,
+      "404": 5
+    },
+    "methods": {
+      "POST": 34,
+      "GET": 23
+    },
+    "credentialsIncluded": false
+  },
+  "securityBoundary": "Authorized low-volume production checks only: read-only operations, documented harmless refusals, missing/forged-token checks, and removed-route checks. No exploit payloads, fuzzing, brute force, cross-account access, financial writes, or load tests.",
+  "tests": [
+    {
+      "case": "One authorized production login",
+      "method": "POST",
+      "endpoint": "/api/user-login",
+      "testData": "credentials supplied privately",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Login successful\",\n  \"token\": \"[REDACTED]\",\n  \"data\": {\n    \"id\": \"[REDACTED]\",\n    \"username\": \"[REDACTED]\",\n    \"mobile\": \"[REDACTED]\",\n    \"device_id\": \"[REDACTED]\",\n    \"credit\": \"[REDACTED]\",\n    \"has_received_bonus\": true\n  }\n}",
+      "detail": "Token and credential not included in report.",
+      "caseNumber": 1
+    },
+    {
+      "case": "Profile shape, numeric balance and withdrawal limits",
+      "method": "GET",
+      "endpoint": "/api/get-profile-usser",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Your profile, balance and app settings.\",\n  \"data\": {\n    \"bonus_qualifying_deposit\": {\n      \"amount\": \"[REDACTED]\",\n      \"order_id\": \"[REDACTED]\",\n      \"deposit_id\": \"[REDACTED]\",\n      \"at\": \"2026-06-29T12:00:40.633Z\"\n    },\n    \"_id\": \"[REDACTED]\",\n    \"app_id\": \"[REDACTED]\",\n    \"user_id\": \"[REDACTED]\",\n    \"mobile\": \"[REDACTED]\",\n    \"username\": \"[REDACTED]\",\n    \"device_id\": \"[REDACTED]\",\n    \"color\": \"green\",\n    \"inactive_reason\": \"\",\n    \"status\": \"active\",\n    \"registered_by\": \"[REDACTED]\",\n    \"has_received_bonus\": true,\n    \"credit\": \"[REDACTED]\",\n    \"win_amount\": \"[REDACTED]\",\n    \"loss_amount\": \"[REDACTED]\",\n    \"withdraw_min...[truncated]",
+      "detail": "Profile and API response format.",
+      "caseNumber": 2
+    },
+    {
+      "case": "App setting allowlist",
+      "method": "GET",
+      "endpoint": "/api/app-setting-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The app settings.\",\n  \"data\": {\n    \"_id\": \"[REDACTED]\",\n    \"max_deposit\": \"49999\",\n    \"max_withdraw\": \"5000\",\n    \"min_deposit\": \"100\",\n    \"min_withdraw\": \"1\",\n    \"per_day_withdraw_request\": \"30\",\n    \"whatsapp_Number\": \"\",\n    \"withdraw_close_time\": \"23:59\",\n    \"withdraw_enable_disable\": \"yes\",\n    \"withdraw_open_time\": \"00:00\",\n    \"home_screen_marquee\": \"Welcome TO RCB Matka No.1  TRUSTED APP . PLAY BIG WIN BIG.\",\n    \"deposit_on_off\": \"on\",\n    \"whatsapp_Number_first\": \"\",\n    \"apk_version\": \"3\",\n    \"withdraw_upi\": \"[REDACTED]\",\n    \"bonus_unlock_min_deposit\": 500\n  }\n}",
+      "detail": "Allows _id and exactly 15 app fields.",
+      "caseNumber": 3
+    },
+    {
+      "case": "Public contact settings allowlist",
+      "method": "POST",
+      "endpoint": "/api/front-user-contact-us",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The contact details and app settings.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"max_deposit\": \"49999\",\n      \"max_withdraw\": \"5000\",\n      \"min_deposit\": \"100\",\n      \"min_withdraw\": \"1\",\n      \"per_day_withdraw_request\": \"30\",\n      \"whatsapp_Number\": \"\",\n      \"withdraw_close_time\": \"23:59\",\n      \"withdraw_enable_disable\": \"yes\",\n      \"withdraw_open_time\": \"00:00\",\n      \"home_screen_marquee\": \"Welcome TO RCB Matka No.1  TRUSTED APP . PLAY BIG WIN BIG.\",\n      \"deposit_on_off\": \"on\",\n      \"whatsapp_Number_first\": \"\",\n      \"apk_version\": \"3\",\n      \"withdraw_upi\": \"false\",\n      \"bonus_unlock...[truncated]",
+      "detail": "Allows _id and exactly 15 app fields.",
+      "caseNumber": 4
+    },
+    {
+      "case": "Profile settingData allowlist",
+      "method": "GET",
+      "endpoint": "/api/get-profile-usser",
+      "testData": "(profile read)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Your profile, balance and app settings.\",\n  \"data\": {\n    \"bonus_qualifying_deposit\": {\n      \"amount\": \"[REDACTED]\",\n      \"order_id\": \"[REDACTED]\",\n      \"deposit_id\": \"[REDACTED]\",\n      \"at\": \"2026-06-29T12:00:40.633Z\"\n    },\n    \"_id\": \"[REDACTED]\",\n    \"app_id\": \"[REDACTED]\",\n    \"user_id\": \"[REDACTED]\",\n    \"mobile\": \"[REDACTED]\",\n    \"username\": \"[REDACTED]\",\n    \"device_id\": \"[REDACTED]\",\n    \"color\": \"green\",\n    \"inactive_reason\": \"\",\n    \"status\": \"active\",\n    \"registered_by\": \"[REDACTED]\",\n    \"has_received_bonus\": true,\n    \"credit\": \"[REDACTED]\",\n    \"win_amount\": \"[REDACTED]\",\n    \"loss_amount\": \"[REDACTED]\",\n    \"withdraw_min...[truncated]",
+      "detail": "Fields=16; extras=",
+      "caseNumber": 5
+    },
+    {
+      "case": "Main market list schema/timezone",
+      "method": "GET",
+      "endpoint": "/api/main-market-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Today's main markets: 57, 38 of them taking bids now.\",\n  \"server_time\": \"2026-10-26T13:37:23+05:30\",\n  \"timezone\": \"Asia/Kolkata\",\n  \"data\": [\n    {\n      \"id\": \"[REDACTED]\",\n      \"market_name\": \"Sai Morning\",\n      \"market_id\": \"[REDACTED]\",\n      \"type\": \"mainmarket\",\n      \"open_time\": \"09:15\",\n      \"close_time\": \"10:15\",\n      \"open_result_time\": \"09:25\",\n      \"close_result_time\": \"10:25\",\n      \"betStatus\": \"Close\",\n      \"openstatus\": \"Close\",\n      \"closestatus\": \"Close\",\n      \"betStatusMsg\": \"Close For Today\",\n      \"result\": \"***-**-***\",\n      \"phase\": \"closed\",\n      \"bidding\": \"none\",\n      \"...[truncated]",
+      "detail": "Checks list, phase/bidding and timezone.",
+      "caseNumber": 6
+    },
+    {
+      "case": "Starline list schema/timezone",
+      "method": "GET",
+      "endpoint": "/api/kingstarline-market-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Today's Starline draws: 13, 9 of them taking bids now.\",\n  \"server_time\": \"2026-10-26T13:37:23+05:30\",\n  \"timezone\": \"Asia/Kolkata\",\n  \"data\": [\n    {\n      \"id\": \"[REDACTED]\",\n      \"market_name\": \"10:30 AM\",\n      \"market_id\": \"[REDACTED]\",\n      \"type\": \"kingstarline\",\n      \"close_time\": \"10:25\",\n      \"close_result_time\": \"10:30\",\n      \"betStatus\": \"Close\",\n      \"betStatusMsg\": \"Close For Today\",\n      \"result\": \"***-*\",\n      \"phase\": \"closed\",\n      \"bidding\": \"none\",\n      \"close_bids_until\": \"10:25\",\n      \"status_text\": \"Closed for today.\"\n    },\n    {\n      \"id\": \"[REDACTED]\",\n      \"market_name\"...[truncated]",
+      "detail": "Checks list, phase/bidding and timezone.",
+      "caseNumber": 7
+    },
+    {
+      "case": "King Jackpot list schema/timezone",
+      "method": "GET",
+      "endpoint": "/api/kingjackport-market-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Today's King Jackpot draws: 13, 9 of them taking bids now.\",\n  \"server_time\": \"2026-10-26T13:37:24+05:30\",\n  \"timezone\": \"Asia/Kolkata\",\n  \"data\": [\n    {\n      \"id\": \"[REDACTED]\",\n      \"market_name\": \"Jackpot 10:00 AM\",\n      \"market_id\": \"[REDACTED]\",\n      \"type\": \"kingjackport\",\n      \"close_time\": \"09:55\",\n      \"close_result_time\": \"10:00\",\n      \"betStatus\": \"Close\",\n      \"betStatusMsg\": \"Close For Today\",\n      \"result\": \"**\",\n      \"phase\": \"closed\",\n      \"bidding\": \"none\",\n      \"close_bids_until\": \"09:55\",\n      \"status_text\": \"Closed for today.\"\n    },\n    {\n      \"id\": \"[REDACTED]\",\n      \"mar...[truncated]",
+      "detail": "Checks list, phase/bidding and timezone.",
+      "caseNumber": 8
+    },
+    {
+      "case": "Support contacts configured-or-empty response",
+      "method": "GET",
+      "endpoint": "/api/support-contacts",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"2\",\n  \"message\": \"No support WhatsApp or call number is switched on right now.\",\n  \"data\": {\n    \"whatsapp\": [],\n    \"call\": [],\n    \"email\": \"[REDACTED]\",\n    \"telegram\": \"https://www.googlercbmatka.com/\"\n  }\n}",
+      "detail": "Expected configured lists or documented empty response.",
+      "caseNumber": 9
+    },
+    {
+      "case": "Support WhatsApp configured-or-empty response",
+      "method": "GET",
+      "endpoint": "/api/support-whatsapp",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"2\",\n  \"message\": \"No support WhatsApp number is switched on right now.\"\n}",
+      "detail": "Documented empty-or-configured response.",
+      "caseNumber": 10
+    },
+    {
+      "case": "Onboarding WhatsApp configured-or-empty response",
+      "method": "GET",
+      "endpoint": "/api/onboarding-whatsapp",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"2\",\n  \"message\": \"No sign-up WhatsApp number is switched on right now.\"\n}",
+      "detail": "Documented empty-or-configured response.",
+      "caseNumber": 11
+    },
+    {
+      "case": "Player game rates response shape",
+      "method": "GET",
+      "endpoint": "/api/my-game-rates",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Your game rates: the standard rates.\",\n  \"data\": {\n    \"unit\": 10,\n    \"kingjackport\": {\n      \"jodi_digit\": {\n        \"rate\": 1000,\n        \"min\": 5,\n        \"max\": 100000\n      },\n      \"jodi_digit_bulk\": {\n        \"rate\": 100,\n        \"min\": 5,\n        \"max\": 100000\n      },\n      \"group_jodi\": {\n        \"rate\": 100,\n        \"min\": 5,\n        \"max\": 100000\n      }\n    },\n    \"mainmarket\": {\n      \"single_digit\": {\n        \"rate\": 100,\n        \"min\": 5,\n        \"max\": 10000\n      },\n      \"single_digit_bulk\": {\n        \"rate\": 10,\n        \"min\": 5,\n        \"max\": 10000\n      },\n      \"single_pana\": {\n      ...[truncated]",
+      "detail": "Read-only; no bids placed.",
+      "caseNumber": 12
+    },
+    {
+      "case": "Main-market rate limits response shape",
+      "method": "GET",
+      "endpoint": "/api/main-market-gameRate-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The min and max bid of 16 main market games.\",\n  \"data\": {\n    \"single_digit\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"single_pana\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"double_pana\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"triple_pana\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"sp_dp_tp\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"sp_motor\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"dp_motor\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"jodi_digit\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"half_sangam_a\": {\n      \"min\": 5,\n      \"max\": 10000\n    ...[truncated]",
+      "detail": "Read-only; no bids placed.",
+      "caseNumber": 13
+    },
+    {
+      "case": "Starline rate limits response shape",
+      "method": "GET",
+      "endpoint": "/api/king-starline-gameRate-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The min and max bid of 12 Starline games.\",\n  \"data\": {\n    \"sp_dp_tp\": {\n      \"min\": 5,\n      \"max\": 1000\n    },\n    \"triple_pana\": {\n      \"min\": 5,\n      \"max\": 1000\n    },\n    \"single_pana_bulk\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"single_digit\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"sp_motor\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"single_digit_bulk\": {\n      \"min\": 5,\n      \"max\": 100000\n    },\n    \"group_pana\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"double_pana_bulk\": {\n      \"min\": 5,\n      \"max\": 10000\n    },\n    \"double_pana\": {\n      \"min\": 5,\n      \"max...[truncated]",
+      "detail": "Read-only; no bids placed.",
+      "caseNumber": 14
+    },
+    {
+      "case": "Jackpot rate limits response shape",
+      "method": "GET",
+      "endpoint": "/api/king-jackport-gameRate-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The min and max bid of 4 King Jackpot games.\",\n  \"data\": {\n    \"jodi_digit\": {\n      \"min\": 5,\n      \"max\": 100000\n    },\n    \"jodi_digit_bulk\": {\n      \"min\": 5,\n      \"max\": 100000\n    },\n    \"group_jodi\": {\n      \"min\": 5,\n      \"max\": 100000\n    },\n    \"digits_based_jodi\": {\n      \"min\": 5,\n      \"max\": 100000\n    }\n  }\n}",
+      "detail": "Read-only; no bids placed.",
+      "caseNumber": 15
+    },
+    {
+      "case": "Number list singlePana",
+      "method": "POST",
+      "endpoint": "/api/number-list",
+      "testData": {
+        "type": "singlePana"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The 120 panas for Single Pana.\",\n  \"data\": [\n    \"120\",\n    \"123\",\n    \"124\",\n    \"125\",\n    \"126\",\n    \"127\",\n    \"128\",\n    \"129\",\n    \"130\",\n    \"134\",\n    \"135\",\n    \"136\",\n    \"137\",\n    \"138\",\n    \"139\",\n    \"140\",\n    \"145\",\n    \"146\",\n    \"147\",\n    \"148\",\n    \"149\",\n    \"150\",\n    \"156\",\n    \"157\",\n    \"158\",\n    \"159\",\n    \"160\",\n    \"167\",\n    \"168\",\n    \"169\",\n    \"170\",\n    \"178\",\n    \"179\",\n    \"180\",\n    \"189\",\n    \"190\",\n    \"230\",\n    \"234\",\n    \"235\",\n    \"236\",\n    \"237\",\n    \"238\",\n    \"239\",\n    \"240\",\n    \"245\",\n    \"246\",\n    \"247\",\n    \"248\",\n    \"249\",\n    \"250\",\n    \"256\",\n    \"257\",...[truncated]",
+      "detail": "Expected 120 unique values.",
+      "caseNumber": 16
+    },
+    {
+      "case": "Number list doublePana",
+      "method": "POST",
+      "endpoint": "/api/number-list",
+      "testData": {
+        "type": "doublePana"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The 90 panas for Double Pana.\",\n  \"data\": [\n    \"100\",\n    \"110\",\n    \"112\",\n    \"113\",\n    \"114\",\n    \"115\",\n    \"116\",\n    \"117\",\n    \"118\",\n    \"119\",\n    \"122\",\n    \"133\",\n    \"144\",\n    \"155\",\n    \"166\",\n    \"177\",\n    \"188\",\n    \"199\",\n    \"200\",\n    \"220\",\n    \"223\",\n    \"224\",\n    \"225\",\n    \"226\",\n    \"227\",\n    \"228\",\n    \"229\",\n    \"233\",\n    \"244\",\n    \"255\",\n    \"266\",\n    \"277\",\n    \"288\",\n    \"299\",\n    \"300\",\n    \"330\",\n    \"334\",\n    \"335\",\n    \"336\",\n    \"337\",\n    \"338\",\n    \"339\",\n    \"344\",\n    \"355\",\n    \"366\",\n    \"377\",\n    \"388\",\n    \"399\",\n    \"400\",\n    \"440\",\n    \"445\",\n    \"446\",\n...[truncated]",
+      "detail": "Expected 90 unique values.",
+      "caseNumber": 17
+    },
+    {
+      "case": "Number list triplePana",
+      "method": "POST",
+      "endpoint": "/api/number-list",
+      "testData": {
+        "type": "triplePana"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The 10 panas for Triple Pana.\",\n  \"data\": [\n    \"000\",\n    \"111\",\n    \"222\",\n    \"333\",\n    \"444\",\n    \"555\",\n    \"666\",\n    \"777\",\n    \"888\",\n    \"999\"\n  ]\n}",
+      "detail": "Expected 10 unique values.",
+      "caseNumber": 18
+    },
+    {
+      "case": "Number list halfSangam",
+      "method": "POST",
+      "endpoint": "/api/number-list",
+      "testData": {
+        "type": "halfSangam"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The 220 panas for Half Sangam.\",\n  \"data\": [\n    \"000\",\n    \"100\",\n    \"110\",\n    \"111\",\n    \"112\",\n    \"113\",\n    \"114\",\n    \"115\",\n    \"116\",\n    \"117\",\n    \"118\",\n    \"119\",\n    \"120\",\n    \"122\",\n    \"123\",\n    \"124\",\n    \"125\",\n    \"126\",\n    \"127\",\n    \"128\",\n    \"129\",\n    \"130\",\n    \"133\",\n    \"134\",\n    \"135\",\n    \"136\",\n    \"137\",\n    \"138\",\n    \"139\",\n    \"140\",\n    \"144\",\n    \"145\",\n    \"146\",\n    \"147\",\n    \"148\",\n    \"149\",\n    \"150\",\n    \"155\",\n    \"156\",\n    \"157\",\n    \"158\",\n    \"159\",\n    \"160\",\n    \"166\",\n    \"167\",\n    \"168\",\n    \"169\",\n    \"170\",\n    \"177\",\n    \"178\",\n    \"179\",\n    \"180\",...[truncated]",
+      "detail": "Expected 220 unique values including 344",
+      "caseNumber": 19
+    },
+    {
+      "case": "Number list fullSangam",
+      "method": "POST",
+      "endpoint": "/api/number-list",
+      "testData": {
+        "type": "fullSangam"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"The 220 panas for Full Sangam.\",\n  \"data\": [\n    \"000\",\n    \"100\",\n    \"110\",\n    \"111\",\n    \"112\",\n    \"113\",\n    \"114\",\n    \"115\",\n    \"116\",\n    \"117\",\n    \"118\",\n    \"119\",\n    \"120\",\n    \"122\",\n    \"123\",\n    \"124\",\n    \"125\",\n    \"126\",\n    \"127\",\n    \"128\",\n    \"129\",\n    \"130\",\n    \"133\",\n    \"134\",\n    \"135\",\n    \"136\",\n    \"137\",\n    \"138\",\n    \"139\",\n    \"140\",\n    \"144\",\n    \"145\",\n    \"146\",\n    \"147\",\n    \"148\",\n    \"149\",\n    \"150\",\n    \"155\",\n    \"156\",\n    \"157\",\n    \"158\",\n    \"159\",\n    \"160\",\n    \"166\",\n    \"167\",\n    \"168\",\n    \"169\",\n    \"170\",\n    \"177\",\n    \"178\",\n    \"179\",\n    \"180\",...[truncated]",
+      "detail": "Expected 220 unique values including 344",
+      "caseNumber": 20
+    },
+    {
+      "case": "Negative: unknown number-list type",
+      "method": "POST",
+      "endpoint": "/api/number-list",
+      "testData": {
+        "type": "invalid-test-type"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"Unknown list type. Send type as one of: singlePana, doublePana, triplePana, halfSangam, fullSangam.\"\n}",
+      "detail": "Harmless invalid value; no state change.",
+      "caseNumber": 21
+    },
+    {
+      "case": "Withdrawal permission numeric fields",
+      "method": "POST",
+      "endpoint": "/api/withdraw-manage-permission",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Withdrawals: ₹1 to ₹5000 a time, 30 requests a day, from 00:00 to 23:59 (IST).\",\n  \"data\": {\n    \"min_withdraw\": 1,\n    \"max_withdraw\": 5000,\n    \"opentime\": \"00:00\",\n    \"closetime\": \"23:59\",\n    \"min_deposit\": 100,\n    \"max_deposit\": 49999,\n    \"per_day\": 30,\n    \"source\": \"app\",\n    \"withdrawals_enabled\": true\n  }\n}",
+      "detail": "Verifies stable business-field types.",
+      "caseNumber": 22
+    },
+    {
+      "case": "Withdrawal limits agree across profile and limits endpoint",
+      "method": "POST",
+      "endpoint": "/api/withdraw-manage-permission",
+      "testData": "profile vs permission",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Withdrawals: ₹1 to ₹5000 a time, 30 requests a day, from 00:00 to 23:59 (IST).\",\n  \"data\": {\n    \"min_withdraw\": 1,\n    \"max_withdraw\": 5000,\n    \"opentime\": \"00:00\",\n    \"closetime\": \"23:59\",\n    \"min_deposit\": 100,\n    \"max_deposit\": 49999,\n    \"per_day\": 30,\n    \"source\": \"app\",\n    \"withdrawals_enabled\": true\n  }\n}",
+      "detail": "Compares source/min/max/per-day.",
+      "caseNumber": 23
+    },
+    {
+      "case": "Bank account list response shape/privacy",
+      "method": "POST",
+      "endpoint": "/api/withdraw-list-bank-account",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Your bank account ending 9012 is waiting for approval.\",\n  \"data\": [\n    {\n      \"reason\": null,\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"user_name\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"account_number\": \"[REDACTED]\",\n      \"ifsc_code\": \"[REDACTED]\",\n      \"bank_name\": \"State Bank of India\",\n      \"account_holder_name\": \"[REDACTED]\",\n      \"status\": \"pending\",\n      \"created_at\": \"2026-06-29T12:07:41.198Z\",\n      \"updated_at\": \"2026-10-24T08:13:46.370Z\",\n      \"in_use\": false\n    }\n  ]\n}",
+      "detail": "No reviewer email/id/timestamp fields.",
+      "caseNumber": 24
+    },
+    {
+      "case": "Approved bank list response shape/privacy",
+      "method": "POST",
+      "endpoint": "/api/withdraw-list-bank-account-success",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"You have no approved bank account yet.\",\n  \"data\": []\n}",
+      "detail": "No reviewer email/id/timestamp fields.",
+      "caseNumber": 25
+    },
+    {
+      "case": "Withdrawal history excludes staff fields",
+      "method": "GET",
+      "endpoint": "/api/withdraw-request-list?page=1&status=all",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 1 of 2: 10 of your 16 withdrawal requests.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"user_name\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"amount\": \"[REDACTED]\",\n      \"account_number\": \"[REDACTED]\",\n      \"bank_name\": \"AU Small Bank\",\n      \"ifsc_code\": \"[REDACTED]\",\n      \"withdraw_payment_type\": \"bank\",\n      \"account_holder_name\": \"[REDACTED]\",\n      \"admin_approve\": \"no\",\n      \"status\": \"pending\",\n      \"reason\": null,\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 13:43:44\",\n      \"total_withdraw\": \"[REDACTED]\",\n      \"total_count_withdraw\": 3,\n      \"...[truncated]",
+      "detail": "Checks player response privacy fields.",
+      "caseNumber": 26
+    },
+    {
+      "case": "Deposit channel allowlist and effective min/max",
+      "method": "GET",
+      "endpoint": "/api/getway-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"1 payment channel open for deposits.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"name\": \"PG\",\n      \"min\": 100,\n      \"max\": 100000,\n      \"type\": \"online\",\n      \"upi_id\": \"[REDACTED]\",\n      \"status\": \"active\",\n      \"effective_min\": 100,\n      \"effective_max\": 49999\n    }\n  ],\n  \"deposit_limits\": {\n    \"min_deposit\": 100,\n    \"max_deposit\": 49999\n  }\n}",
+      "detail": "No sensitive bank config fields; requires session.",
+      "caseNumber": 27
+    },
+    {
+      "case": "Negative: getway-list requires session",
+      "method": "GET",
+      "endpoint": "/api/getway-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 401,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"You are not logged in. Send your session token as Authorization: Bearer <token>.\"\n}",
+      "detail": "No-token auth boundary.",
+      "caseNumber": 28
+    },
+    {
+      "case": "Main market history page 1",
+      "method": "POST",
+      "endpoint": "/api/main-market-bet-history",
+      "testData": {
+        "page": 1
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 1 of 8: 10 of your 75 main market bids.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"user_name\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"market_id\": \"[REDACTED]\",\n      \"market_type\": \"mainmarket\",\n      \"game_type_name\": \"triple_pana\",\n      \"bet_key\": 555,\n      \"bet_key1\": 0,\n      \"bet_amount\": 10,\n      \"session\": \"open\",\n      \"result\": \"pending\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 14:31:08\",\n      \"win_Amt\": 0,\n      \"created_at\": \"2026-10-24T09:01:08.415Z\",\n      \"updated_at\": \"2026-10-24T09:01:08.649Z\",\n      \"__v\": 0\n   ...[truncated]",
+      "detail": "Page and total metadata present.",
+      "caseNumber": 29
+    },
+    {
+      "case": "Starline history page 1",
+      "method": "POST",
+      "endpoint": "/api/kingstarline-market-bet-history",
+      "testData": {
+        "page": 1
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 1 of 5: 10 of your 46 Starline bids.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"user_name\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"market_id\": \"[REDACTED]\",\n      \"market_type\": \"kingstarline\",\n      \"game_type_name\": \"triple_pana\",\n      \"bet_key\": 555,\n      \"bet_key1\": 0,\n      \"bet_amount\": 10,\n      \"win_amount\": \"[REDACTED]\",\n      \"session\": \"open\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 17:21:01\",\n      \"result\": \"loss\",\n      \"bet_date\": \"24-10-2026\",\n      \"bet_date_time\": \"2026-10-24 14:31:18\",\n      \"rate\": 7000,\n      \"declaratio...[truncated]",
+      "detail": "Page and total metadata present.",
+      "caseNumber": 30
+    },
+    {
+      "case": "King Jackpot history page 1",
+      "method": "POST",
+      "endpoint": "/api/kingJackport-market-bet-history",
+      "testData": {
+        "page": 1
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 1 of 1: 10 of your 10 King Jackpot bids.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"user_name\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"market_id\": \"[REDACTED]\",\n      \"market_type\": \"kingjackport\",\n      \"game_type_name\": \"group_jodi\",\n      \"bet_key\": 17,\n      \"bet_key1\": 0,\n      \"bet_amount\": 10,\n      \"session\": \"close\",\n      \"result\": \"pending\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 14:31:21\",\n      \"win_Amt\": 0,\n      \"created_at\": \"2026-10-24T09:01:21.876Z\",\n      \"updated_at\": \"2026-10-24T09:01:22.118Z\",\n      \"__v\": 0\n ...[truncated]",
+      "detail": "Page and total metadata present.",
+      "caseNumber": 31
+    },
+    {
+      "case": "History negative/boundary: page zero normalization",
+      "method": "POST",
+      "endpoint": "/api/main-market-bet-history",
+      "testData": {
+        "page": 0
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 1 of 8: 10 of your 75 main market bids.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"user_name\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"market_id\": \"[REDACTED]\",\n      \"market_type\": \"mainmarket\",\n      \"game_type_name\": \"triple_pana\",\n      \"bet_key\": 555,\n      \"bet_key1\": 0,\n      \"bet_amount\": 10,\n      \"session\": \"open\",\n      \"result\": \"pending\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 14:31:08\",\n      \"win_Amt\": 0,\n      \"created_at\": \"2026-10-24T09:01:08.415Z\",\n      \"updated_at\": \"2026-10-24T09:01:08.649Z\",\n      \"__v\": 0\n   ...[truncated]",
+      "detail": "Paging/filter boundary; read-only.",
+      "caseNumber": 32
+    },
+    {
+      "case": "History negative/boundary: string page parsing",
+      "method": "POST",
+      "endpoint": "/api/main-market-bet-history",
+      "testData": {
+        "page": "2"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 2 of 8: 10 of your 75 main market bids.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"user_name\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"market_id\": \"[REDACTED]\",\n      \"market_type\": \"mainmarket\",\n      \"game_type_name\": \"triple_pana\",\n      \"bet_key\": 555,\n      \"bet_key1\": 0,\n      \"bet_amount\": 10,\n      \"session\": \"open\",\n      \"result\": \"pending\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 14:31:02\",\n      \"win_Amt\": 0,\n      \"created_at\": \"2026-10-24T09:01:02.630Z\",\n      \"updated_at\": \"2026-10-24T09:01:02.868Z\",\n      \"__v\": 0\n   ...[truncated]",
+      "detail": "Paging/filter boundary; read-only.",
+      "caseNumber": 33
+    },
+    {
+      "case": "History negative/boundary: beyond-end page",
+      "method": "POST",
+      "endpoint": "/api/main-market-bet-history",
+      "testData": {
+        "page": 9999
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 9999 is past the end: there are 8 pages of main market bids.\",\n  \"data\": [],\n  \"pagination\": 10000,\n  \"totalRecords\": 75,\n  \"totalNumberPage\": 8,\n  \"total_win_amount\": \"[REDACTED]\"\n}",
+      "detail": "Paging/filter boundary; read-only.",
+      "caseNumber": 34
+    },
+    {
+      "case": "History negative/boundary: unmatched market filter",
+      "method": "POST",
+      "endpoint": "/api/main-market-bet-history",
+      "testData": {
+        "page": 1,
+        "market_id": "[REDACTED]"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"No main market bids match these filters.\",\n  \"data\": [],\n  \"pagination\": 2,\n  \"totalRecords\": 0,\n  \"totalNumberPage\": 0,\n  \"total_win_amount\": \"[REDACTED]\"\n}",
+      "detail": "Paging/filter boundary; read-only.",
+      "caseNumber": 35
+    },
+    {
+      "case": "Win total is numeric across filter",
+      "method": "POST",
+      "endpoint": "/api/main-market-bet-history",
+      "testData": {
+        "page": 1,
+        "result": [
+          "win"
+        ]
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 1 of 1: 4 of your 4 matching bids.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"user_name\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"market_id\": \"[REDACTED]\",\n      \"market_type\": \"mainmarket\",\n      \"game_type_name\": \"single_digit\",\n      \"bet_key\": 9,\n      \"bet_key1\": 0,\n      \"bet_amount\": 20,\n      \"win_amount\": \"[REDACTED]\",\n      \"session\": \"open\",\n      \"date\": \"02-10-2026\",\n      \"date_time\": \"2026-10-02 11:45:00\",\n      \"result\": \"win\",\n      \"bet_date\": \"02-10-2026\",\n      \"bet_date_time\": \"2026-10-02 08:40:00\",\n      \"rate\": 100,\n      \"declaration_key...[truncated]",
+      "detail": "Win summary includes numeric total.",
+      "caseNumber": 36
+    },
+    {
+      "case": "Passbook all page 1",
+      "method": "POST",
+      "endpoint": "/api/passbook-list",
+      "testData": {
+        "page": 1,
+        "type": "all"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 1 of 8: 20 of your 141 entries.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"username\": \"[REDACTED]\",\n      \"type\": \"deposit\",\n      \"open_amount\": 3021,\n      \"amount\": \"[REDACTED]\",\n      \"close_amount\": 3341,\n      \"remark\": \"Win Amount ( 03:30PM Dp Motor :open 320 )\",\n      \"action_by\": \"User\",\n      \"bet_id\": \"[REDACTED]\",\n      \"bet_entry\": \"win\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 17:21:01\",\n      \"created_at\": \"2026-10-24T11:51:02.071Z\",\n      \"updated_at\": \"2026-10-24T11:51:02.071Z\",\n      \"__v\": 0\n    },\n    {\n...[truncated]",
+      "detail": "Page/filter + whole-ledger counts and totals.",
+      "caseNumber": 37
+    },
+    {
+      "case": "Passbook all page 2",
+      "method": "POST",
+      "endpoint": "/api/passbook-list",
+      "testData": {
+        "page": 2,
+        "type": "all"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 2 of 8: 20 of your 141 entries.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"username\": \"[REDACTED]\",\n      \"type\": \"withdraw\",\n      \"open_amount\": 3111,\n      \"amount\": \"[REDACTED]\",\n      \"close_amount\": 3101,\n      \"remark\": \"Bid ( 03:30PM : Single Pana Bulk : open ) 137\",\n      \"action_by\": \"User\",\n      \"bet_id\": \"[REDACTED]\",\n      \"bet_entry\": \"stake\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 14:31:12\",\n      \"created_at\": \"2026-10-24T09:01:12.554Z\",\n      \"updated_at\": \"2026-10-24T09:01:12.554Z\",\n      \"__v\": 0\n    },\n...[truncated]",
+      "detail": "Page/filter + whole-ledger counts and totals.",
+      "caseNumber": 38
+    },
+    {
+      "case": "Passbook credit page 1",
+      "method": "POST",
+      "endpoint": "/api/passbook-list",
+      "testData": {
+        "page": 1,
+        "type": "credit"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 1 of 1: 15 of your 15 credit entries.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"username\": \"[REDACTED]\",\n      \"type\": \"deposit\",\n      \"open_amount\": 3021,\n      \"amount\": \"[REDACTED]\",\n      \"close_amount\": 3341,\n      \"remark\": \"Win Amount ( 03:30PM Dp Motor :open 320 )\",\n      \"action_by\": \"User\",\n      \"bet_id\": \"[REDACTED]\",\n      \"bet_entry\": \"win\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 17:21:01\",\n      \"created_at\": \"2026-10-24T11:51:02.071Z\",\n      \"updated_at\": \"2026-10-24T11:51:02.071Z\",\n      \"__v\": 0\n    },\n...[truncated]",
+      "detail": "Page/filter + whole-ledger counts and totals.",
+      "caseNumber": 39
+    },
+    {
+      "case": "Passbook debit page 1",
+      "method": "POST",
+      "endpoint": "/api/passbook-list",
+      "testData": {
+        "page": 1,
+        "type": "debit"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 1 of 7: 20 of your 126 debit entries.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"username\": \"[REDACTED]\",\n      \"type\": \"withdraw\",\n      \"open_amount\": 2931,\n      \"amount\": \"[REDACTED]\",\n      \"close_amount\": 2921,\n      \"remark\": \"Bid ( Jackpot03:00PM : Group Jodi : close ) 17\",\n      \"action_by\": \"User\",\n      \"bet_id\": \"[REDACTED]\",\n      \"bet_entry\": \"stake\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 14:31:21\",\n      \"created_at\": \"2026-10-24T09:01:22.197Z\",\n      \"updated_at\": \"2026-10-24T09:01:22.197Z\",\n      \"__v\": 0\n...[truncated]",
+      "detail": "Page/filter + whole-ledger counts and totals.",
+      "caseNumber": 40
+    },
+    {
+      "case": "Passbook all page 9999",
+      "method": "POST",
+      "endpoint": "/api/passbook-list",
+      "testData": {
+        "page": 9999,
+        "type": "all"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Page 9999 is past the end: there are 8 pages of entries.\",\n  \"data\": [],\n  \"totalRecords\": 141,\n  \"totalNumberPage\": 8,\n  \"page\": 9999,\n  \"pageSize\": 20,\n  \"type\": \"all\",\n  \"counts\": {\n    \"all\": 141,\n    \"credit\": \"[REDACTED]\",\n    \"debit\": 126\n  },\n  \"totals\": {\n    \"money_in\": \"[REDACTED]\",\n    \"money_out\": \"[REDACTED]\"\n  }\n}",
+      "detail": "Page/filter + whole-ledger counts and totals.",
+      "caseNumber": 41
+    },
+    {
+      "case": "Passbook legacy request with no page",
+      "method": "POST",
+      "endpoint": "/api/passbook-list",
+      "testData": "no page",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Your Passbook: 141 entries, newest first.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"user_id\": \"[REDACTED]\",\n      \"mobile\": \"[REDACTED]\",\n      \"username\": \"[REDACTED]\",\n      \"type\": \"deposit\",\n      \"open_amount\": 3021,\n      \"amount\": \"[REDACTED]\",\n      \"close_amount\": 3341,\n      \"remark\": \"Win Amount ( 03:30PM Dp Motor :open 320 )\",\n      \"action_by\": \"User\",\n      \"bet_id\": \"[REDACTED]\",\n      \"bet_entry\": \"win\",\n      \"date\": \"24-10-2026\",\n      \"date_time\": \"2026-10-24 17:21:01\",\n      \"created_at\": \"2026-10-24T11:51:02.071Z\",\n      \"updated_at\": \"2026-10-24T11:51:02.071Z\",\n      \"__v\": 0\n    },\n ...[truncated]",
+      "detail": "Compatibility mode returns all rows.",
+      "caseNumber": 42
+    },
+    {
+      "case": "Notification list response shape",
+      "method": "GET",
+      "endpoint": "/api/notifiaction-list?page=1",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"You have no notifications today.\",\n  \"data\": [],\n  \"totalRecords\": 0,\n  \"unread\": 0,\n  \"total\": 0,\n  \"page\": 1,\n  \"totalNumberPage\": 1,\n  \"window\": \"today\",\n  \"window_start\": \"2026-10-25T18:30:00.000Z\",\n  \"clears_at\": \"2026-10-26T18:30:00.000Z\"\n}",
+      "detail": "Checks documented JSON/message fields.",
+      "caseNumber": 43
+    },
+    {
+      "case": "Unread support count response shape",
+      "method": "GET",
+      "endpoint": "/api/user-chat-count",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"No unread replies from support.\",\n  \"count\": 0\n}",
+      "detail": "Checks documented JSON/message fields.",
+      "caseNumber": 44
+    },
+    {
+      "case": "Referral summary response shape",
+      "method": "GET",
+      "endpoint": "/api/referral-summary",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Your Refer & Earn summary: 2 friends referred.\",\n  \"data\": {\n    \"program\": {\n      \"referral_enabled\": true,\n      \"reward_amount\": 100,\n      \"friend_reward_enabled\": true,\n      \"friend_reward_amount\": 50,\n      \"joining_enabled\": true,\n      \"joining_amount\": 50,\n      \"min_deposit\": 500\n    },\n    \"code\": \"RCBU5CU7\",\n    \"share_text\": \"Play on RCB Matka with me! Use my referral code RCBU5CU7 when you join, then add ₹500 or more in one deposit: you get ₹50 and I get ₹100.\",\n    \"qualified\": true,\n    \"qualified_at\": \"2026-10-06T08:46:41.099Z\",\n    \"joining_bonus\": null,\n    \"friend_bonus\": null,\n    \"lock...[truncated]",
+      "detail": "Checks documented JSON/message fields.",
+      "caseNumber": 45
+    },
+    {
+      "case": "Market timetable response shape",
+      "method": "GET",
+      "endpoint": "/api/main-market-time-table",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": true,\n  \"message\": \"Time table (IST): 57 main markets, 13 Starline draws, 13 King Jackpot draws.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"market_type\": \"mainmarket\",\n      \"market_name\": \"Sai Morning\",\n      \"market_id\": \"[REDACTED]\",\n      \"open_time\": \"09:15\",\n      \"close_time\": \"10:15\",\n      \"open_result_time\": \"09:25\",\n      \"close_result_time\": \"10:25\",\n      \"sunday\": true,\n      \"monday\": true,\n      \"tuesday\": true,\n      \"wednesday\": true,\n      \"thursday\": true,\n      \"friday\": true,\n      \"saturday\": true\n    },\n    {\n      \"_id\": \"[REDACTED]\",\n      \"market_type\": \"mainmarket\",\n      \"market_name\": \"R...[truncated]",
+      "detail": "Checks documented JSON/message fields.",
+      "caseNumber": 46
+    },
+    {
+      "case": "Game rates response shape",
+      "method": "GET",
+      "endpoint": "/api/game-rate-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"Game rates: 7 main market games, 4 Starline games, 3 King Jackpot games.\",\n  \"mainMarketRatedata\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"name\": \"Single Digits\",\n      \"game_rate\": \"100\",\n      \"max_bid\": \"10000\",\n      \"min_bid\": \"5\",\n      \"name_slug\": \"single_digit\",\n      \"created_at\": \"2026-10-26T08:07:49.432Z\",\n      \"updated_at\": \"2026-10-26T08:07:49.432Z\"\n    },\n    {\n      \"_id\": \"[REDACTED]\",\n      \"name\": \"Jodi Digits\",\n      \"game_rate\": \"1000\",\n      \"max_bid\": \"10000\",\n      \"min_bid\": \"5\",\n      \"name_slug\": \"jodi_digit\",\n      \"created_at\": \"2026-10-26T08:07:49.432Z\",\n      \"updated_at\": \"2...[truncated]",
+      "detail": "Checks documented JSON/message fields.",
+      "caseNumber": 47
+    },
+    {
+      "case": "Video list response shape",
+      "method": "POST",
+      "endpoint": "/api/video-list",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"1\",\n  \"message\": \"How to Play: 1 video.\",\n  \"data\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"link\": \"https://www.youtube.com/watch?v=KLuTLF3x9sA\",\n      \"title\": \"How To Play\",\n      \"created_at\": \"2026-01-12T13:04:15.627Z\",\n      \"updated_at\": \"2026-01-12T13:04:15.627Z\",\n      \"__v\": 0\n    }\n  ],\n  \"count\": 1\n}",
+      "detail": "Checks documented JSON/message fields.",
+      "caseNumber": 48
+    },
+    {
+      "case": "Negative: unsupported notification type",
+      "method": "POST",
+      "endpoint": "/api/update-notification",
+      "testData": {
+        "type": "invalid-test-type",
+        "status": "on"
+      },
+      "result": "PASS",
+      "httpStatus": 200,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"Unknown notification type. Send type as one of: main_notification, game_notification, kingstarline_notification, kingjacport_notification.\"\n}",
+      "detail": "Refusal case; invalid enum.",
+      "caseNumber": 49
+    },
+    {
+      "case": "Removed route returns JSON 404 (request 61)",
+      "method": "POST",
+      "endpoint": "/api/kingstarline-market-result-history",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 404,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"There is no POST /api/kingstarline-market-result-history on this server. Check the address and the method (GET or POST).\"\n}",
+      "detail": "Removed route/method response contract.",
+      "caseNumber": 50
+    },
+    {
+      "case": "Removed route returns JSON 404 (request 86)",
+      "method": "POST",
+      "endpoint": "/api/active-chat",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 404,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"There is no POST /api/active-chat on this server. Check the address and the method (GET or POST).\"\n}",
+      "detail": "Removed route/method response contract.",
+      "caseNumber": 51
+    },
+    {
+      "case": "Removed route returns JSON 404 (request 93)",
+      "method": "POST",
+      "endpoint": "/api/submit-idea",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 404,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"There is no POST /api/submit-idea on this server. Check the address and the method (GET or POST).\"\n}",
+      "detail": "Removed route/method response contract.",
+      "caseNumber": 52
+    },
+    {
+      "case": "Removed route returns JSON 404 (request 95)",
+      "method": "POST",
+      "endpoint": "/api/register-step1",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 404,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"There is no POST /api/register-step1 on this server. Check the address and the method (GET or POST).\"\n}",
+      "detail": "Removed route/method response contract.",
+      "caseNumber": 53
+    },
+    {
+      "case": "Removed route returns JSON 404 (request 67)",
+      "method": "POST",
+      "endpoint": "/api/deposit-status",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 404,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"There is no POST /api/deposit-status on this server. Check the address and the method (GET or POST).\"\n}",
+      "detail": "Removed route/method response contract.",
+      "caseNumber": 54
+    },
+    {
+      "case": "Security: protected profile rejects forged token",
+      "method": "GET",
+      "endpoint": "/api/get-profile-usser",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 401,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"Your session has expired. Please log in again.\"\n}",
+      "detail": "Invalid token rejected.",
+      "caseNumber": 55
+    },
+    {
+      "case": "Security: protected profile rejects absent token",
+      "method": "GET",
+      "endpoint": "/api/get-profile-usser",
+      "testData": "(none)",
+      "result": "PASS",
+      "httpStatus": 401,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"You are not logged in. Send your session token as Authorization: Bearer <token>.\"\n}",
+      "detail": "Missing token rejected.",
+      "caseNumber": 56
+    },
+    {
+      "case": "Negative: malformed JSON rejected safely",
+      "method": "POST",
+      "endpoint": "/api/number-list",
+      "testData": "malformed JSON body",
+      "result": "PASS",
+      "httpStatus": 400,
+      "response": "{\n  \"success\": \"0\",\n  \"message\": \"The request body is not valid JSON.\"\n}",
+      "detail": "400 JSON error response.",
+      "caseNumber": 57
+    }
+  ]
+}
