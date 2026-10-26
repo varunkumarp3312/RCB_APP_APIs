@@ -1,7 +1,7 @@
 # Production API Security Review
 
-**Date:** 2026-10-26  
-**Target:** `https://api.rcbmatka.com`  
+**Date:** 2026-10-26
+**Target:** `https://api.rcbmatka.com`
 **Review type:** Limited, non-disruptive production checks
 
 ## Scope and result
