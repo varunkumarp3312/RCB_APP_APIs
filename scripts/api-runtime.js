@@ -1,6 +1,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { documentedBusinessContract, evaluateBusinessContract } = require('./api-contracts');
+const { assertionContract, evaluateAssertions } = require('./api-assertions');
+const { prepareNewFeature, evaluateNewFeature } = require('./new-feature-contracts');
 
 let activeRuntime;
 
@@ -61,7 +63,9 @@ class ApiRuntime {
         folders: itemFolders,
         name: item.name || `Request ${this.requests.length + 1}`,
         expectedStatus: this.expectedStatus(item),
-        businessContract: documentedBusinessContract(request.method, this.rawUrl(request))
+        assertionContract: assertionContract(item),
+        businessContract: item['x-qa-checklist'] || item['x-assertions']?.kind === 'explicit'
+          ? null : documentedBusinessContract(request.method, this.rawUrl(request))
       });
     }
   }
@@ -228,6 +232,11 @@ class ApiRuntime {
 
     const { item, request, expectedStatus } = configured;
     const method = String(request.method || 'GET').toUpperCase();
+    const checklistSkip = prepareNewFeature(item, this);
+    if (checklistSkip) return {
+      id: requestId, name: configured.name, method, url: safeUrl(this.resolveUrl(request)),
+      status: 'SKIPPED', expectedStatus, response: `Not sent: ${checklistSkip}`, durationMs: 0
+    };
     const missingPathVariables = (request.url?.variable || [])
       .filter((entry) => this.replaceVariables(entry.value) === '')
       .map((entry) => entry.key);
@@ -260,7 +269,7 @@ class ApiRuntime {
         durationMs: 0
       };
     }
-    const writeGuarded = this.requestIsWriteGuarded(item);
+    const writeGuarded = item['x-write-guarded'] || this.requestIsWriteGuarded(item);
     if (!this.allowWrites && (writeGuarded || !['GET', 'HEAD', 'OPTIONS'].includes(method))) {
       return {
         id: requestId,
@@ -309,10 +318,24 @@ class ApiRuntime {
         ? redactText(responseText)
         : formatBinaryResponse(responseBytes);
 
-      this.saveResponseVariables(item, responseText);
       const businessCheck = evaluateBusinessContract(configured.businessContract, responseText);
+      const durationMs = Date.now() - startedAt;
+      const assertionInput = {
+        text: responseText, bytes: responseBytes,
+        contentType: response.headers.get('content-type') || '', durationMs, headers: response.headers
+      };
+      const assertionCheck = item['x-qa-checklist']
+        ? evaluateNewFeature(item['x-qa-checklist'], assertionInput, this, item)
+        : evaluateAssertions(configured.assertionContract, assertionInput, businessCheck);
+      if (item['x-qa-checklist'] && durationMs > Number(process.env.API_MAX_RESPONSE_MS || 30000)) {
+        assertionCheck.errors.push('Response exceeded the configured response time limit.');
+        assertionCheck.status = 'FAIL';
+      }
       const statusMatches = response.status === expectedStatus;
       const businessMatches = !businessCheck || businessCheck.status !== 'FAIL';
+      if (statusMatches && businessMatches && assertionCheck.status === 'PASS') {
+        this.saveResponseVariables(item, responseText);
+      }
       return {
         id: requestId,
         name: configured.name,
@@ -323,12 +346,18 @@ class ApiRuntime {
         expectedStatus,
         response: responseContent,
         contentType: response.headers.get('content-type') || '',
-        durationMs: Date.now() - startedAt,
+        ...(item['x-qa-checklist'] === 20 || item['x-qa-checklist'] === 22 ? {
+          responseHeaders: Object.fromEntries(['x-payin-result','x-payin-reason','x-payin-ref'].map((key) => [key,response.headers.get(key) || '']))
+        } : {}),
+        durationMs,
+        assertionOutcome: assertionCheck.status,
+        assertionErrors: assertionCheck.errors,
+        assertionCount: assertionCheck.assertions,
         expectedBusiness: configured.businessContract,
         businessOutcome: businessCheck?.status || 'NOT_ASSERTED',
         businessMessage: businessCheck?.message || '',
         actualBusinessSuccess: businessCheck?.actualSuccess,
-        outcome: statusMatches && businessMatches ? 'PASS' : 'FAIL'
+        outcome: statusMatches && businessMatches && assertionCheck.status === 'PASS' ? 'PASS' : 'FAIL'
       };
     } catch (error) {
       return {
@@ -422,4 +451,4 @@ function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-module.exports = { getRuntime, redactText, formatBinaryResponse };
+module.exports = { ApiRuntime, getRuntime, redactText, formatBinaryResponse };

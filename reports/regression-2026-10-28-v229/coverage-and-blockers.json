@@ -1,0 +1,1581 @@
+{
+  "masterRows": 659,
+  "collectionRequests": 197,
+  "runs": [
+    {
+      "source": "api-execution-report.json",
+      "total": 149,
+      "passed": 123,
+      "failed": 26
+    },
+    {
+      "source": "retest/api-execution-report.json",
+      "total": 149,
+      "passed": 143,
+      "failed": 6
+    },
+    {
+      "source": "contract-retest/api-execution-report.json",
+      "total": 11,
+      "passed": 11,
+      "failed": 0
+    }
+  ],
+  "summary": {
+    "passed": 148,
+    "failed": 1,
+    "skipped": 0,
+    "configurationWarnings": 3,
+    "documentedRefusals": 0,
+    "unsuccessfulFlags": 92,
+    "total": 149
+  },
+  "coverageCounts": {
+    "PASS": 34,
+    "NOT RUN": 199,
+    "BLOCKED - STAGING REQUIRED": 74,
+    "FAIL": 1
+  },
+  "cases": [
+    {
+      "id": "TC-GEN-001",
+      "status": "PASS",
+      "reason": "Request 1: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-GEN-002",
+      "status": "PASS",
+      "reason": "Request 134: HTTP 404, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-GEN-003",
+      "status": "PASS",
+      "reason": "Request 135: HTTP 404, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-GEN-004",
+      "status": "PASS",
+      "reason": "Request 136: HTTP 404, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-GEN-005",
+      "status": "PASS",
+      "reason": "Request 137: HTTP 400, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-GEN-006",
+      "status": "PASS",
+      "reason": "Request 138: HTTP 400, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-GEN-007",
+      "status": "PASS",
+      "reason": "Request 139: HTTP 413, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-GEN-008",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-GEN-009",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-002",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-003",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-004",
+      "status": "PASS",
+      "reason": "Request 140: HTTP 200, PASS; response assertions matched | Request 141: HTTP 200, PASS; response assertions matched | Request 142: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-AUTH-005",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-006",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-007",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-008",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-009",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-010",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-011",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-012",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-AUTH-013",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-020",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-021",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-AUTH-022",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-AUTH-023",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-024",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-030",
+      "status": "PASS",
+      "reason": "Request 143: HTTP 401, PASS; response assertions matched | Request 144: HTTP 401, PASS; response assertions matched | Request 145: HTTP 401, PASS; response assertions matched | Request 146: HTTP 401, PASS; response assertions matched | Request 147: HTTP 401, PASS; response assertions matched | Request 148: HTTP 401, PASS; response assertions matched | Request 149: HTTP 401, PASS; response assertions matched | Request 150: HTTP 401, PASS; response assertions matched | Request 151: HTTP 401, PASS; response assertions matched | Request 152: HTTP 401, PASS; response assertions matched | Request 153: HTTP 401, PASS; response assertions matched | Request 154: HTTP 401, PASS; response assertions matched | Request 155: HTTP 401, PASS; response assertions matched | Request 156: HTTP 401, PASS; response assertions matched | Request 157: HTTP 401, PASS; response assertions matched | Request 158: HTTP 401, PASS; response assertions matched | Request 159: HTTP 401, PASS; response assertions matched | Request 160: HTTP 401, PASS; response assertions matched | Request 161: HTTP 401, PASS; response assertions matched | Request 162: HTTP 401, PASS; response assertions matched | Request 163: HTTP 401, PASS; response assertions matched | Request 164: HTTP 401, PASS; response assertions matched | Request 165: HTTP 401, PASS; response assertions matched | Request 166: HTTP 401, PASS; response assertions matched | Request 167: HTTP 401, PASS; response assertions matched | Request 168: HTTP 401, PASS; response assertions matched | Request 169: HTTP 401, PASS; response assertions matched | Request 170: HTTP 401, PASS; response assertions matched | Request 171: HTTP 401, PASS; response assertions matched | Request 172: HTTP 401, PASS; response assertions matched | Request 173: HTTP 401, PASS; response assertions matched | Request 174: HTTP 401, PASS; response assertions matched | Request 175: HTTP 401, PASS; response assertions matched | Request 176: HTTP 401, PASS; response assertions matched | Request 177: HTTP 401, PASS; response assertions matched | Request 178: HTTP 401, PASS; response assertions matched | Request 179: HTTP 401, PASS; response assertions matched | Request 180: HTTP 401, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-AUTH-031",
+      "status": "PASS",
+      "reason": "Request 181: HTTP 401, PASS; response assertions matched | Request 182: HTTP 401, PASS; response assertions matched | Request 183: HTTP 401, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-AUTH-032",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-AUTH-033",
+      "status": "PASS",
+      "reason": "Request 184: HTTP 401, PASS; response assertions matched | Request 185: HTTP 401, PASS; response assertions matched | Request 186: HTTP 401, PASS; response assertions matched | Request 187: HTTP 401, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-AUTH-034",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-AUTH-035",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-036",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-037",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-038",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-039",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-040",
+      "status": "PASS",
+      "reason": "Request 188: HTTP 401, PASS; response assertions matched | Request 189: HTTP 401, PASS; response assertions matched | Request 190: HTTP 401, PASS; response assertions matched | Request 191: HTTP 401, PASS; response assertions matched | Request 192: HTTP 401, PASS; response assertions matched | Request 193: HTTP 401, PASS; response assertions matched | Request 194: HTTP 401, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-AUTH-041",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-AUTH-042",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-043",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-044",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-045",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-AUTH-046",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-AUTH-047",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-002",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-003",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-004",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-PROF-010",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-011",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-012",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-013",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-014",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-015",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-016",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-017",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-018",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-PROF-019",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-PROF-030",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-031",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-032",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-033",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-034",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-035",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-036",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-PROF-040",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-041",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-042",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-043",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-044",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-045",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-PROF-046",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-050",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-051",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-060",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-061",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PROF-062",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-002",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-003",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-004",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-005",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-006",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-007",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-008",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-009",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-020",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-021",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-022",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-030",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-031",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-032",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-040",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-041",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-MKT-042",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-MKT-050",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-051",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-052",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-060",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-061",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-062",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-063",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-070",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-071",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-080",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-081",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-082",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-090",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-100",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-101",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-102",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-103",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-104",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-105",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-106",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-107",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-MKT-108",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-MKT-109",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-BID-001",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-002",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-003",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-004",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-005",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-006",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-007",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-008",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-009",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-010",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-011",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-012",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-013",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-BID-020",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-021",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-BID-022",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BID-023",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-024",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-025",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-026",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-027",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-030",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-BID-031",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-032",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-033",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-034",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-035",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-040",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-041",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-042",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-043",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BID-044",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BID-045",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BID-046",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BID-047",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-048",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-049",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BID-050",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-051",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BID-052",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-NUM-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NUM-002",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NUM-003",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NUM-004",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NUM-005",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NUM-006",
+      "status": "PASS",
+      "reason": "Request 195: HTTP 200, PASS; response assertions matched | Request 196: HTTP 200, PASS; response assertions matched | Request 197: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "TC-NUM-007",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NUM-008",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-002",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-003",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-004",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-005",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-006",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-007",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-008",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-009",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-HIST-010",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-DEP-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-DEP-002",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-DEP-003",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-DEP-010",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-DEP-020",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-DEP-021",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-DEP-022",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-DEP-023",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-DEP-030",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-DEP-031",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-DEP-032",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-DEP-033",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PASS-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PASS-002",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PASS-003",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PASS-004",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PASS-005",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-PASS-006",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-PASS-007",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BANK-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BANK-002",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BANK-003",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BANK-004",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BANK-005",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BANK-006",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-BANK-010",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BANK-011",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BANK-012",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BANK-013",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BANK-014",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BANK-015",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-BANK-020",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BANK-021",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-BANK-022",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-002",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-003",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-010",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-011",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-014",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-015",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-012",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-013",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-016",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-017",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-018",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-019",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-020",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-WDR-021",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-WDR-022",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-023",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-024",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-025",
+      "status": "NOT RUN",
+      "reason": "Requires a dedicated funded player and wallet-moving execution; excluded from this regression."
+    },
+    {
+      "id": "TC-WDR-026",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-027",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-WDR-030",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-031",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-040",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-041",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-WDR-042",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NOTIF-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NOTIF-002",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NOTIF-003",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NOTIF-004",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-NOTIF-005",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-SUP-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-SUP-002",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-SUP-003",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-SUP-004",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-SUP-005",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-SUP-006",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-SUP-007",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-CHAT-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-CHAT-002",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-CHAT-003",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-CHAT-004",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-CHAT-005",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-CHAT-006",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-CHAT-007",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-CHAT-008",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-CHAT-009",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-CHAT-010",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-CHAT-011",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-REF-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-REF-010",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-REF-011",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-REF-012",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-REF-013",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-REF-014",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-REF-015",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-REF-016",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-REF-017",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-REF-018",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-REF-019",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-REF-020",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-REF-030",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-REF-031",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-REF-032",
+      "status": "NOT RUN",
+      "reason": "Requires additional account/token/data prerequisites or a separate stateful workflow."
+    },
+    {
+      "id": "TC-INFO-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-INFO-002",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-INFO-010",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-GEO-001",
+      "status": "NOT RUN",
+      "reason": "Not automated in this cycle; scenario-specific data, boundary variants or postconditions still require execution. Endpoint smoke checks do not prove this entire case."
+    },
+    {
+      "id": "TC-GEO-002",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-GEO-003",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-GEO-004",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-GEO-005",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-GEO-006",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-GEO-007",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "TC-GEO-008",
+      "status": "BLOCKED - STAGING REQUIRED",
+      "reason": "Requires controlled staging settings/data; production configuration was not changed."
+    },
+    {
+      "id": "NEW-001",
+      "status": "PASS",
+      "reason": "Request 112: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-002",
+      "status": "PASS",
+      "reason": "Request 113: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-003",
+      "status": "PASS",
+      "reason": "Request 114: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-004",
+      "status": "PASS",
+      "reason": "Request 115: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-005",
+      "status": "PASS",
+      "reason": "Request 116: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-006",
+      "status": "PASS",
+      "reason": "Request 117: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-007",
+      "status": "PASS",
+      "reason": "Request 118: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-008",
+      "status": "PASS",
+      "reason": "Request 119: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-009",
+      "status": "PASS",
+      "reason": "Request 120: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-010",
+      "status": "PASS",
+      "reason": "Request 121: HTTP 400, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-011",
+      "status": "PASS",
+      "reason": "Request 122: HTTP 400, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-012",
+      "status": "PASS",
+      "reason": "Request 123: HTTP 400, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-013",
+      "status": "PASS",
+      "reason": "Request 124: HTTP 401, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-014",
+      "status": "PASS",
+      "reason": "Request 125: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-015",
+      "status": "PASS",
+      "reason": "Request 126: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-016",
+      "status": "PASS",
+      "reason": "Request 127: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-017",
+      "status": "PASS",
+      "reason": "Request 128: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-018",
+      "status": "PASS",
+      "reason": "Request 129: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-019",
+      "status": "PASS",
+      "reason": "Request 130: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-020",
+      "status": "PASS",
+      "reason": "Request 131: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-021",
+      "status": "PASS",
+      "reason": "Request 132: HTTP 200, PASS; response assertions matched"
+    },
+    {
+      "id": "NEW-022",
+      "status": "FAIL",
+      "reason": "Request 133: HTTP 200, FAIL; Duplicate order verdict; Duplicate reason; Duplicate title; Duplicate explanation"
+    }
+  ]
+}

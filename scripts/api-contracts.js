@@ -1,4 +1,8 @@
 const APP_USED_ROUTES = new Set([
+  'GET favourite-markets',
+  'POST favourite-markets',
+  'POST favourite-markets/sync',
+  'GET deposit.php',
   'POST user-login',
   'POST logout',
   'GET get-profile-usser',
@@ -152,6 +156,9 @@ function evaluateBusinessContract(contract, responseBody) {
     body = JSON.parse(responseBody);
   } catch {
     return { status: 'FAIL', message: 'Expected a JSON response for the documented business contract.' };
+  }
+  if (!body || typeof body !== 'object' || Array.isArray(body)) {
+    return { status: 'FAIL', message: 'Expected a JSON object for the documented business contract.' };
   }
 
   if (contract.kind === 'exact') {

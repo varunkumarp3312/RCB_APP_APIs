@@ -307,8 +307,9 @@ for (const [index, remark] of [
   });
 }
 
-const csvPath = path.join(reports, 'master_Testcase_suite.csv');
-writeCsv(csvPath, masterRows);
+const csvPath = path.join(reports, 'APK_API_master_Testcase_suite.csv');
+// Preserve the reconciled master and its newer cases when rebuilding historical documents.
+if (!fs.existsSync(csvPath)) writeCsv(csvPath, masterRows);
 
 const distinctReferencedTests = {
   collection: collectionRun.length,
@@ -361,7 +362,7 @@ const coverageDoc = createDocument([
   bullet('Credentials, tokens, account identifiers, payment details, and personal data are redacted from submitted evidence.'),
   bullet('Historical execution results, current retest results, and developer-reported local results are separate evidence cycles and must not be added together as unique test cases.'),
   heading('4. Evidence files'),
-  bullet('master_Testcase_suite.csv — case-level execution and disposition register, with source evidence and cycle labels.'),
+  bullet('APK_API_master_Testcase_suite.csv — case-level execution and disposition register, with source evidence and cycle labels.'),
   bullet('TEST_EXECUTION_REPORT.docx — execution totals, observed failures/blockers, and security observations.'),
   bullet('TEST_CLOSURE_REPORT.docx — disposition, reported defects, accepted behaviors, and remaining closure conditions.'),
   bullet('Existing reports: ALL_TEST_CASE_EXECUTION_REPORT.md, ALL_TEST_CASE_COVERAGE_BUGS.md, qa-all-resolved-bugs-retest-2026-10-26.md, qa-partial-retest-closure-2026-10-26.md, SECURITY_TEST_EXECUTION_REPORT.md.')

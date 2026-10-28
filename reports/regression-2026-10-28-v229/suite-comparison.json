@@ -1,0 +1,1788 @@
+{
+  "oldRows": 351,
+  "incomingRows": 637,
+  "added": [
+    "TC-GEN-001",
+    "TC-GEN-002",
+    "TC-GEN-003",
+    "TC-GEN-004",
+    "TC-GEN-005",
+    "TC-GEN-006",
+    "TC-GEN-007",
+    "TC-GEN-008",
+    "TC-GEN-009",
+    "TC-AUTH-001",
+    "TC-AUTH-002",
+    "TC-AUTH-003",
+    "TC-AUTH-004",
+    "TC-AUTH-005",
+    "TC-AUTH-006",
+    "TC-AUTH-007",
+    "TC-AUTH-008",
+    "TC-AUTH-009",
+    "TC-AUTH-010",
+    "TC-AUTH-011",
+    "TC-AUTH-012",
+    "TC-AUTH-013",
+    "TC-AUTH-020",
+    "TC-AUTH-021",
+    "TC-AUTH-022",
+    "TC-AUTH-023",
+    "TC-AUTH-024",
+    "TC-AUTH-030",
+    "TC-AUTH-031",
+    "TC-AUTH-032",
+    "TC-AUTH-033",
+    "TC-AUTH-034",
+    "TC-AUTH-035",
+    "TC-AUTH-036",
+    "TC-AUTH-037",
+    "TC-AUTH-038",
+    "TC-AUTH-039",
+    "TC-AUTH-040",
+    "TC-AUTH-041",
+    "TC-AUTH-042",
+    "TC-AUTH-043",
+    "TC-AUTH-044",
+    "TC-AUTH-045",
+    "TC-AUTH-046",
+    "TC-AUTH-047",
+    "TC-PROF-001",
+    "TC-PROF-002",
+    "TC-PROF-003",
+    "TC-PROF-004",
+    "TC-PROF-010",
+    "TC-PROF-011",
+    "TC-PROF-012",
+    "TC-PROF-013",
+    "TC-PROF-014",
+    "TC-PROF-015",
+    "TC-PROF-016",
+    "TC-PROF-017",
+    "TC-PROF-018",
+    "TC-PROF-019",
+    "TC-PROF-030",
+    "TC-PROF-031",
+    "TC-PROF-032",
+    "TC-PROF-033",
+    "TC-PROF-034",
+    "TC-PROF-035",
+    "TC-PROF-036",
+    "TC-PROF-040",
+    "TC-PROF-041",
+    "TC-PROF-042",
+    "TC-PROF-043",
+    "TC-PROF-044",
+    "TC-PROF-045",
+    "TC-PROF-046",
+    "TC-PROF-050",
+    "TC-PROF-051",
+    "TC-PROF-060",
+    "TC-PROF-061",
+    "TC-PROF-062",
+    "TC-MKT-001",
+    "TC-MKT-002",
+    "TC-MKT-003",
+    "TC-MKT-004",
+    "TC-MKT-005",
+    "TC-MKT-006",
+    "TC-MKT-007",
+    "TC-MKT-008",
+    "TC-MKT-009",
+    "TC-MKT-020",
+    "TC-MKT-021",
+    "TC-MKT-022",
+    "TC-MKT-030",
+    "TC-MKT-031",
+    "TC-MKT-032",
+    "TC-MKT-040",
+    "TC-MKT-041",
+    "TC-MKT-042",
+    "TC-MKT-050",
+    "TC-MKT-051",
+    "TC-MKT-052",
+    "TC-MKT-060",
+    "TC-MKT-061",
+    "TC-MKT-062",
+    "TC-MKT-063",
+    "TC-MKT-070",
+    "TC-MKT-071",
+    "TC-MKT-080",
+    "TC-MKT-081",
+    "TC-MKT-082",
+    "TC-MKT-090",
+    "TC-MKT-100",
+    "TC-MKT-101",
+    "TC-MKT-102",
+    "TC-MKT-103",
+    "TC-MKT-104",
+    "TC-MKT-105",
+    "TC-MKT-106",
+    "TC-MKT-107",
+    "TC-MKT-108",
+    "TC-MKT-109",
+    "TC-BID-001",
+    "TC-BID-002",
+    "TC-BID-003",
+    "TC-BID-004",
+    "TC-BID-005",
+    "TC-BID-006",
+    "TC-BID-007",
+    "TC-BID-008",
+    "TC-BID-009",
+    "TC-BID-010",
+    "TC-BID-011",
+    "TC-BID-012",
+    "TC-BID-013",
+    "TC-BID-020",
+    "TC-BID-021",
+    "TC-BID-022",
+    "TC-BID-023",
+    "TC-BID-024",
+    "TC-BID-025",
+    "TC-BID-026",
+    "TC-BID-027",
+    "TC-BID-030",
+    "TC-BID-031",
+    "TC-BID-032",
+    "TC-BID-033",
+    "TC-BID-034",
+    "TC-BID-035",
+    "TC-BID-040",
+    "TC-BID-041",
+    "TC-BID-042",
+    "TC-BID-043",
+    "TC-BID-044",
+    "TC-BID-045",
+    "TC-BID-046",
+    "TC-BID-047",
+    "TC-BID-048",
+    "TC-BID-049",
+    "TC-BID-050",
+    "TC-BID-051",
+    "TC-BID-052",
+    "TC-NUM-001",
+    "TC-NUM-002",
+    "TC-NUM-003",
+    "TC-NUM-004",
+    "TC-NUM-005",
+    "TC-NUM-006",
+    "TC-NUM-007",
+    "TC-NUM-008",
+    "TC-HIST-001",
+    "TC-HIST-002",
+    "TC-HIST-003",
+    "TC-HIST-004",
+    "TC-HIST-005",
+    "TC-HIST-006",
+    "TC-HIST-007",
+    "TC-HIST-008",
+    "TC-HIST-009",
+    "TC-HIST-010",
+    "TC-DEP-001",
+    "TC-DEP-002",
+    "TC-DEP-003",
+    "TC-DEP-010",
+    "TC-DEP-020",
+    "TC-DEP-021",
+    "TC-DEP-022",
+    "TC-DEP-023",
+    "TC-DEP-030",
+    "TC-DEP-031",
+    "TC-DEP-032",
+    "TC-DEP-033",
+    "TC-PASS-001",
+    "TC-PASS-002",
+    "TC-PASS-003",
+    "TC-PASS-004",
+    "TC-PASS-005",
+    "TC-PASS-006",
+    "TC-PASS-007",
+    "TC-BANK-001",
+    "TC-BANK-002",
+    "TC-BANK-003",
+    "TC-BANK-004",
+    "TC-BANK-005",
+    "TC-BANK-006",
+    "TC-BANK-010",
+    "TC-BANK-011",
+    "TC-BANK-012",
+    "TC-BANK-013",
+    "TC-BANK-014",
+    "TC-BANK-015",
+    "TC-BANK-020",
+    "TC-BANK-021",
+    "TC-BANK-022",
+    "TC-WDR-001",
+    "TC-WDR-002",
+    "TC-WDR-003",
+    "TC-WDR-010",
+    "TC-WDR-011",
+    "TC-WDR-014",
+    "TC-WDR-015",
+    "TC-WDR-012",
+    "TC-WDR-013",
+    "TC-WDR-016",
+    "TC-WDR-017",
+    "TC-WDR-018",
+    "TC-WDR-019",
+    "TC-WDR-020",
+    "TC-WDR-021",
+    "TC-WDR-022",
+    "TC-WDR-023",
+    "TC-WDR-024",
+    "TC-WDR-025",
+    "TC-WDR-026",
+    "TC-WDR-027",
+    "TC-WDR-030",
+    "TC-WDR-031",
+    "TC-WDR-040",
+    "TC-WDR-041",
+    "TC-WDR-042",
+    "TC-NOTIF-001",
+    "TC-NOTIF-002",
+    "TC-NOTIF-003",
+    "TC-NOTIF-004",
+    "TC-NOTIF-005",
+    "TC-SUP-001",
+    "TC-SUP-002",
+    "TC-SUP-003",
+    "TC-SUP-004",
+    "TC-SUP-005",
+    "TC-SUP-006",
+    "TC-SUP-007",
+    "TC-CHAT-001",
+    "TC-CHAT-002",
+    "TC-CHAT-003",
+    "TC-CHAT-004",
+    "TC-CHAT-005",
+    "TC-CHAT-006",
+    "TC-CHAT-007",
+    "TC-CHAT-008",
+    "TC-CHAT-009",
+    "TC-CHAT-010",
+    "TC-CHAT-011",
+    "TC-REF-001",
+    "TC-REF-010",
+    "TC-REF-011",
+    "TC-REF-012",
+    "TC-REF-013",
+    "TC-REF-014",
+    "TC-REF-015",
+    "TC-REF-016",
+    "TC-REF-017",
+    "TC-REF-018",
+    "TC-REF-019",
+    "TC-REF-020",
+    "TC-REF-030",
+    "TC-REF-031",
+    "TC-REF-032",
+    "TC-INFO-001",
+    "TC-INFO-002",
+    "TC-INFO-010",
+    "TC-GEO-001",
+    "TC-GEO-002",
+    "TC-GEO-003",
+    "TC-GEO-004",
+    "TC-GEO-005",
+    "TC-GEO-006",
+    "TC-GEO-007",
+    "TC-GEO-008"
+  ],
+  "corrected": [
+    {
+      "id": "API-006",
+      "fields": [
+        "Expected_Result",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 200",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 200\"): the export had written [object Object]."
+      }
+    },
+    {
+      "id": "API-016",
+      "fields": [
+        "Expected_Result",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Remarks": "No support WhatsApp or call number is configured; the API returned the documented empty-configuration response."
+      },
+      "after": {
+        "Expected_Result": "HTTP 200",
+        "Remarks": "No support WhatsApp or call number is configured; the API returned the documented empty-configuration response. | Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 200\"): the export had written [object Object]."
+      }
+    },
+    {
+      "id": "API-017",
+      "fields": [
+        "Expected_Result",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Remarks": "No support WhatsApp number is configured; the API returned the documented no-number response."
+      },
+      "after": {
+        "Expected_Result": "HTTP 200",
+        "Remarks": "No support WhatsApp number is configured; the API returned the documented no-number response. | Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 200\"): the export had written [object Object]."
+      }
+    },
+    {
+      "id": "API-018",
+      "fields": [
+        "Expected_Result",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Remarks": "No onboarding WhatsApp number is configured; the API returned the documented no-number response."
+      },
+      "after": {
+        "Expected_Result": "HTTP 200",
+        "Remarks": "No onboarding WhatsApp number is configured; the API returned the documented no-number response. | Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 200\"): the export had written [object Object]."
+      }
+    },
+    {
+      "id": "API-035",
+      "fields": [
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Historical run from before the removal. POST /api/bet-place-sp-dp-tp was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/bet-place-sp-dp-tp on this server. Check the address and the method (GET or POST).\"; current check: C1-22."
+      }
+    },
+    {
+      "id": "API-060",
+      "fields": [
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Historical run from before the removal. POST /api/main-market-result-history was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/main-market-result-history on this server. Check the address and the method (GET or POST).\"; current check: C1-19."
+      }
+    },
+    {
+      "id": "API-061",
+      "fields": [
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Historical run from before the removal. POST /api/kingstarline-market-result-history was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/kingstarline-market-result-history on this server. Check the address and the method (GET or POST).\"; current check: C1-20."
+      }
+    },
+    {
+      "id": "API-062",
+      "fields": [
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Historical run from before the removal. POST /api/kingJackport-market-result-history was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/kingJackport-market-result-history on this server. Check the address and the method (GET or POST).\"; current check: C1-21."
+      }
+    },
+    {
+      "id": "API-067",
+      "fields": [
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Historical run from before the removal. POST /api/deposit-status was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/deposit-status on this server. Check the address and the method (GET or POST).\"; current check: C1-24."
+      }
+    },
+    {
+      "id": "API-079",
+      "fields": [
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Historical run from before the removal. GET /api/notifiaction-clear was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no GET /api/notifiaction-clear on this server. Check the address and the method (GET or POST).\"; current check: C1-23."
+      }
+    },
+    {
+      "id": "API-086",
+      "fields": [
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Historical run from before the removal. POST /api/active-chat was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/active-chat on this server. Check the address and the method (GET or POST).\"; current check: C1-18."
+      }
+    },
+    {
+      "id": "API-089",
+      "fields": [
+        "Expected_Result",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 200",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 200\"): the export had written [object Object]."
+      }
+    },
+    {
+      "id": "API-093",
+      "fields": [
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Historical run from before the removal. POST /api/submit-idea was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/submit-idea on this server. Check the address and the method (GET or POST).\"; current check: C1-17."
+      }
+    },
+    {
+      "id": "API-095",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/register-step1 was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/register-step1 on this server. Check the address and the method (GET or POST).\"; current check: C1-02."
+      }
+    },
+    {
+      "id": "API-096",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/register-step2 was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/register-step2 on this server. Check the address and the method (GET or POST).\"; current check: C1-03."
+      }
+    },
+    {
+      "id": "API-097",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/register-step3 was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/register-step3 on this server. Check the address and the method (GET or POST).\"; current check: C1-04."
+      }
+    },
+    {
+      "id": "API-098",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/register-step4 was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/register-step4 on this server. Check the address and the method (GET or POST).\"; current check: C1-05."
+      }
+    },
+    {
+      "id": "API-099",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/user-signup was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/user-signup on this server. Check the address and the method (GET or POST).\"; current check: C1-06."
+      }
+    },
+    {
+      "id": "API-100",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/check-user-mobile-registration was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/check-user-mobile-registration on this server. Check the address and the method (GET or POST).\"; current check: C1-09."
+      }
+    },
+    {
+      "id": "API-101",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/Verify-mpin was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/Verify-mpin on this server. Check the address and the method (GET or POST).\"; current check: C1-07."
+      }
+    },
+    {
+      "id": "API-102",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/recoveryAccount was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/recoveryAccount on this server. Check the address and the method (GET or POST).\"; current check: C1-08."
+      }
+    },
+    {
+      "id": "API-103",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/change-mpin was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/change-mpin on this server. Check the address and the method (GET or POST).\"; current check: C1-10."
+      }
+    },
+    {
+      "id": "API-104",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/forget-mpin-otpsend was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/forget-mpin-otpsend on this server. Check the address and the method (GET or POST).\"; current check: C1-11."
+      }
+    },
+    {
+      "id": "API-105",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/forget-mpin-updatempin was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/forget-mpin-updatempin on this server. Check the address and the method (GET or POST).\"; current check: C1-12."
+      }
+    },
+    {
+      "id": "API-106",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 200",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 200\"): the export had written [object Object]. | Historical run from before the removal. POST /api/send-otp-for-forgot-password was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/send-otp-for-forgot-password on this server. Check the address and the method (GET or POST).\"; current check: C1-13."
+      }
+    },
+    {
+      "id": "API-107",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 200",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 200\"): the export had written [object Object]. | Historical run from before the removal. POST /api/forgot-password-verify-otp was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/forgot-password-verify-otp on this server. Check the address and the method (GET or POST).\"; current check: C1-14."
+      }
+    },
+    {
+      "id": "API-108",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 200",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 200\"): the export had written [object Object]. | Historical run from before the removal. POST /api/forgot-password-reset was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/forgot-password-reset on this server. Check the address and the method (GET or POST).\"; current check: C1-15."
+      }
+    },
+    {
+      "id": "API-109",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 410",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 410\"): the export had written [object Object]. | Historical run from before the removal. POST /api/deposit-success was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/deposit-success on this server. Check the address and the method (GET or POST).\"; current check: C1-16."
+      }
+    },
+    {
+      "id": "API-110",
+      "fields": [
+        "Expected_Result",
+        "Status",
+        "Remarks"
+      ],
+      "before": {
+        "Expected_Result": "[object Object]",
+        "Status": "PASS",
+        "Remarks": ""
+      },
+      "after": {
+        "Expected_Result": "HTTP 404",
+        "Status": "SUPERSEDED - ROUTE REMOVED 2026-10-24",
+        "Remarks": "Expected_Result restored on 2026-10-28 from this run's own record (\"expected HTTP 404\"): the export had written [object Object]. | Historical run from before the removal. POST /api/register-jmeter was removed on 2026-10-24 (docs 2.24) and now answers HTTP 404 \"There is no POST /api/register-jmeter on this server. Check the address and the method (GET or POST).\"; current check: C1-01."
+      }
+    },
+    {
+      "id": "FOCUS-016",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"type\":\"singlePana\"}. Detailed case with the exact expected answer: TC-NUM-001."
+      }
+    },
+    {
+      "id": "FOCUS-017",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"type\":\"doublePana\"}. Detailed case with the exact expected answer: TC-NUM-002."
+      }
+    },
+    {
+      "id": "FOCUS-018",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"type\":\"triplePana\"}. Detailed case with the exact expected answer: TC-NUM-003."
+      }
+    },
+    {
+      "id": "FOCUS-019",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"type\":\"halfSangam\"}. Detailed case with the exact expected answer: TC-NUM-004."
+      }
+    },
+    {
+      "id": "FOCUS-020",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"type\":\"fullSangam\"}. Detailed case with the exact expected answer: TC-NUM-005."
+      }
+    },
+    {
+      "id": "FOCUS-021",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"type\":\"abc\"} (as REF-23). Detailed case with the exact expected answer: TC-NUM-006."
+      }
+    },
+    {
+      "id": "FOCUS-029",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"page\":1}. Detailed case with the exact expected answer: TC-HIST-001."
+      }
+    },
+    {
+      "id": "FOCUS-030",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"page\":1}. Detailed case with the exact expected answer: TC-HIST-009."
+      }
+    },
+    {
+      "id": "FOCUS-031",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"page\":1}. Detailed case with the exact expected answer: TC-HIST-009."
+      }
+    },
+    {
+      "id": "FOCUS-032",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"page\":0}. Detailed case with the exact expected answer: TC-HIST-004."
+      }
+    },
+    {
+      "id": "FOCUS-033",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"page\":\"2\"}. Detailed case with the exact expected answer: TC-HIST-004."
+      }
+    },
+    {
+      "id": "FOCUS-034",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"page\":99} (as REF-29). Detailed case with the exact expected answer: TC-HIST-003."
+      }
+    },
+    {
+      "id": "FOCUS-035",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"page\":1,\"market_id\":[\"NOPE\"]} (as REF-29). Detailed case with the exact expected answer: TC-HIST-006."
+      }
+    },
+    {
+      "id": "FOCUS-036",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): {\"page\":1,\"result\":[\"win\"]}. Detailed case with the exact expected answer: TC-HIST-005."
+      }
+    },
+    {
+      "id": "FOCUS-049",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "[object Object]"
+      },
+      "after": {
+        "Remarks": "The export wrote [object Object] here, so the original note is lost. The request this check describes (from its scenario): a type other than main_notification, game_notification, kingstarline_notification, kingjacport_notification. Detailed case with the exact expected answer: TC-PROF-045."
+      }
+    },
+    {
+      "id": "FRAMEWORK-01",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "9 tests passed; 0 failed."
+      },
+      "after": {
+        "Remarks": "9 tests passed; 0 failed. | That was the old 111-request collection; the current one has 89 requests (24 routes removed on 2026-10-24)."
+      }
+    },
+    {
+      "id": "REF-01",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-MKT-060–062, TC-MKT-080–082, TC-BID-047, TC-BID-049."
+      }
+    },
+    {
+      "id": "REF-02",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-BANK-022, TC-WDR-030."
+      }
+    },
+    {
+      "id": "REF-03",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-NUM-004, TC-NUM-005, TC-BID-005."
+      }
+    },
+    {
+      "id": "REF-04",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-PROF-003, TC-PROF-004, TC-WDR-001–003."
+      }
+    },
+    {
+      "id": "REF-05",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-DEP-001, TC-DEP-002."
+      }
+    },
+    {
+      "id": "REF-06",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-MKT-030."
+      }
+    },
+    {
+      "id": "REF-07",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): C1-19–C1-21."
+      }
+    },
+    {
+      "id": "REF-09",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-CHAT-002, TC-CHAT-006, TC-CHAT-007."
+      }
+    },
+    {
+      "id": "REF-10",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-BANK-004, TC-BANK-005, TC-WDR-023."
+      }
+    },
+    {
+      "id": "REF-11",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "The current player collection (postman/import/player-app-api.postman_collection.json) has 89 requests; it does not yet include the three favourite-markets routes added on 2026-10-26 (covered here by TC-MKT-100–109)."
+      }
+    },
+    {
+      "id": "REF-12",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-SUP-001–007."
+      }
+    },
+    {
+      "id": "REF-13",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-MKT-004–008, TC-MKT-020–031."
+      }
+    },
+    {
+      "id": "REF-14",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-AUTH-001, TC-PROF-001."
+      }
+    },
+    {
+      "id": "REF-15",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-GEO-001–008."
+      }
+    },
+    {
+      "id": "REF-16",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-MKT-081, TC-BID-049."
+      }
+    },
+    {
+      "id": "REF-17",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-PROF-030–036."
+      }
+    },
+    {
+      "id": "REF-18",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-BANK-020, TC-BANK-021, TC-PASS-005."
+      }
+    },
+    {
+      "id": "REF-19",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-AUTH-030–047 (every route with no, forged, malformed, expired, ended and blocked tokens)."
+      }
+    },
+    {
+      "id": "REF-20",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-SUP-001, TC-SUP-007."
+      }
+    },
+    {
+      "id": "REF-21",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-INFO-001, TC-INFO-002."
+      }
+    },
+    {
+      "id": "REF-22",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-INFO-010."
+      }
+    },
+    {
+      "id": "REF-23",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-NUM-006."
+      }
+    },
+    {
+      "id": "REF-24",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-PROF-002, TC-PROF-060, TC-PROF-061."
+      }
+    },
+    {
+      "id": "REF-25",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-HIST-001–005, TC-HIST-009."
+      }
+    },
+    {
+      "id": "REF-26",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-PASS-001–007."
+      }
+    },
+    {
+      "id": "REF-27",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-GEN-002–007 and C1-01–C1-24."
+      }
+    },
+    {
+      "id": "REF-28",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-DEP-001, TC-AUTH-030–036."
+      }
+    },
+    {
+      "id": "REF-29",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-HIST-003, TC-HIST-004, TC-HIST-006, TC-HIST-009."
+      }
+    },
+    {
+      "id": "REF-30",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-MKT-007, TC-MKT-008, TC-MKT-021, TC-MKT-031."
+      }
+    },
+    {
+      "id": "REF-31",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Outside the player API (admin console / payment service): not part of the MASTER-COVERAGE-2026-10-28 cycle."
+      }
+    },
+    {
+      "id": "REF-32",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Outside the player API (admin console / payment service): not part of the MASTER-COVERAGE-2026-10-28 cycle."
+      }
+    },
+    {
+      "id": "REF-33",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): every TC-* case states the exact message it expects."
+      }
+    },
+    {
+      "id": "REF-34",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": ""
+      },
+      "after": {
+        "Remarks": "Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-PROF-051 (missing FCM token), TC-PROF-046 (invalid notification status), TC-BANK-011 (invalid IFSC), TC-CHAT-008 (missing / wrong file), TC-INFO-010 and TC-MKT-071 (empty video and game-rate lists)."
+      }
+    },
+    {
+      "id": "CLOSE-01",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Sections 3, 8, and 9"
+      },
+      "after": {
+        "Remarks": "Sections 3, 8, and 9 | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-HIST-001–005."
+      }
+    },
+    {
+      "id": "CLOSE-02",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Sections 4, 8, and 9"
+      },
+      "after": {
+        "Remarks": "Sections 4, 8, and 9 | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-BANK-020, TC-BANK-021, TC-PASS-005."
+      }
+    },
+    {
+      "id": "CLOSE-03",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Sections 5, 8, and 9"
+      },
+      "after": {
+        "Remarks": "Sections 5, 8, and 9 | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-INFO-001, TC-INFO-002."
+      }
+    },
+    {
+      "id": "CLOSE-04",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Sections 2, 6, 8, and 9"
+      },
+      "after": {
+        "Remarks": "Sections 2, 6, 8, and 9 | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-AUTH-030–045."
+      }
+    },
+    {
+      "id": "CLOSE-05",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Sections 7-9"
+      },
+      "after": {
+        "Remarks": "Sections 7-9 | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-GEN-002–007."
+      }
+    },
+    {
+      "id": "CLOSE-06",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Section 2; developer identifies `app/controllers/referral.controller.js`"
+      },
+      "after": {
+        "Remarks": "Section 2; developer identifies `app/controllers/referral.controller.js` | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-AUTH-045."
+      }
+    },
+    {
+      "id": "CLOSE-07",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Section 2; developer identifies `app/controllers/user.controller.js` (`logout`)"
+      },
+      "after": {
+        "Remarks": "Section 2; developer identifies `app/controllers/user.controller.js` (`logout`) | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-AUTH-024."
+      }
+    },
+    {
+      "id": "DESIGN-01",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements."
+      },
+      "after": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements. | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-HIST-003, TC-DEP-032, TC-PASS-004."
+      }
+    },
+    {
+      "id": "DESIGN-02",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements."
+      },
+      "after": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements. | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-BANK-021."
+      }
+    },
+    {
+      "id": "DESIGN-03",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements."
+      },
+      "after": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements. | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-INFO-002."
+      }
+    },
+    {
+      "id": "DESIGN-04",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements."
+      },
+      "after": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements. | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-AUTH-043, TC-AUTH-044, TC-AUTH-020–024."
+      }
+    },
+    {
+      "id": "DESIGN-05",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements."
+      },
+      "after": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements. | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-GEN-002–006."
+      }
+    },
+    {
+      "id": "DESIGN-06",
+      "fields": [
+        "Remarks"
+      ],
+      "before": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements."
+      },
+      "after": {
+        "Remarks": "Retain this rationale when communicating closure; do not reopen as a defect without changed requirements. | Detailed cases added 2026-10-28 (cycle MASTER-COVERAGE-2026-10-28): TC-BID-050 (\"insufficient balance, please refill\")."
+      }
+    }
+  ],
+  "unchanged": [
+    "API-001",
+    "API-002",
+    "API-003",
+    "API-004",
+    "API-005",
+    "API-007",
+    "API-008",
+    "API-009",
+    "API-010",
+    "API-011",
+    "API-012",
+    "API-013",
+    "API-014",
+    "API-015",
+    "API-019",
+    "API-020",
+    "API-021",
+    "API-022",
+    "API-023",
+    "API-024",
+    "API-025",
+    "API-026",
+    "API-027",
+    "API-028",
+    "API-029",
+    "API-030",
+    "API-031",
+    "API-032",
+    "API-033",
+    "API-034",
+    "API-036",
+    "API-037",
+    "API-038",
+    "API-039",
+    "API-040",
+    "API-041",
+    "API-042",
+    "API-043",
+    "API-044",
+    "API-045",
+    "API-046",
+    "API-047",
+    "API-048",
+    "API-049",
+    "API-050",
+    "API-051",
+    "API-052",
+    "API-053",
+    "API-054",
+    "API-055",
+    "API-056",
+    "API-057",
+    "API-058",
+    "API-059",
+    "API-063",
+    "API-064",
+    "API-065",
+    "API-066",
+    "API-068",
+    "API-069",
+    "API-070",
+    "API-071",
+    "API-072",
+    "API-073",
+    "API-074",
+    "API-075",
+    "API-076",
+    "API-077",
+    "API-078",
+    "API-080",
+    "API-081",
+    "API-082",
+    "API-083",
+    "API-084",
+    "API-085",
+    "API-087",
+    "API-088",
+    "API-090",
+    "API-091",
+    "API-092",
+    "API-094",
+    "API-111",
+    "FOCUS-001",
+    "FOCUS-002",
+    "FOCUS-003",
+    "FOCUS-004",
+    "FOCUS-005",
+    "FOCUS-006",
+    "FOCUS-007",
+    "FOCUS-008",
+    "FOCUS-009",
+    "FOCUS-010",
+    "FOCUS-011",
+    "FOCUS-012",
+    "FOCUS-013",
+    "FOCUS-014",
+    "FOCUS-015",
+    "FOCUS-022",
+    "FOCUS-023",
+    "FOCUS-024",
+    "FOCUS-025",
+    "FOCUS-026",
+    "FOCUS-027",
+    "FOCUS-028",
+    "FOCUS-037",
+    "FOCUS-038",
+    "FOCUS-039",
+    "FOCUS-040",
+    "FOCUS-041",
+    "FOCUS-042",
+    "FOCUS-043",
+    "FOCUS-044",
+    "FOCUS-045",
+    "FOCUS-046",
+    "FOCUS-047",
+    "FOCUS-048",
+    "FOCUS-050",
+    "FOCUS-051",
+    "FOCUS-052",
+    "FOCUS-053",
+    "FOCUS-054",
+    "FOCUS-055",
+    "FOCUS-056",
+    "FOCUS-057",
+    "SEC-01",
+    "SEC-02",
+    "SEC-03",
+    "SEC-04",
+    "SEC-05",
+    "SEC-06",
+    "SEC-07",
+    "SEC-08",
+    "SEC-09",
+    "FRAMEWORK-02",
+    "FRAMEWORK-03",
+    "FRAMEWORK-04",
+    "FRAMEWORK-05",
+    "FRAMEWORK-06",
+    "FRAMEWORK-07",
+    "FRAMEWORK-08",
+    "FRAMEWORK-09",
+    "APP-002",
+    "APP-003",
+    "APP-004",
+    "APP-005",
+    "APP-006",
+    "APP-007",
+    "APP-008",
+    "APP-009",
+    "APP-010",
+    "APP-011",
+    "APP-012",
+    "APP-013",
+    "APP-014",
+    "APP-015",
+    "APP-016",
+    "APP-017",
+    "APP-018",
+    "APP-019",
+    "APP-020",
+    "APP-021",
+    "APP-022",
+    "APP-023",
+    "APP-024",
+    "APP-025",
+    "APP-026",
+    "APP-027",
+    "APP-028",
+    "APP-029",
+    "APP-030",
+    "APP-031",
+    "APP-032",
+    "APP-033",
+    "APP-034",
+    "APP-036",
+    "APP-037",
+    "APP-038",
+    "APP-039",
+    "APP-040",
+    "APP-041",
+    "APP-042",
+    "APP-043",
+    "APP-044",
+    "APP-045",
+    "APP-046",
+    "APP-047",
+    "APP-048",
+    "APP-049",
+    "APP-050",
+    "APP-051",
+    "APP-052",
+    "APP-053",
+    "APP-054",
+    "APP-055",
+    "APP-056",
+    "APP-057",
+    "APP-058",
+    "APP-059",
+    "APP-063",
+    "APP-064",
+    "APP-065",
+    "APP-066",
+    "APP-068",
+    "APP-069",
+    "APP-070",
+    "APP-071",
+    "APP-072",
+    "APP-073",
+    "APP-074",
+    "APP-075",
+    "APP-076",
+    "APP-077",
+    "APP-078",
+    "APP-080",
+    "APP-081",
+    "APP-082",
+    "APP-083",
+    "APP-084",
+    "APP-085",
+    "APP-087",
+    "APP-088",
+    "APP-089",
+    "APP-090",
+    "APP-091",
+    "APP-092",
+    "APP-094",
+    "APP-111",
+    "C1-01",
+    "C1-02",
+    "C1-03",
+    "C1-04",
+    "C1-05",
+    "C1-06",
+    "C1-07",
+    "C1-08",
+    "C1-09",
+    "C1-10",
+    "C1-11",
+    "C1-12",
+    "C1-13",
+    "C1-14",
+    "C1-15",
+    "C1-16",
+    "C1-17",
+    "C1-18",
+    "C1-19",
+    "C1-20",
+    "C1-21",
+    "C1-22",
+    "C1-23",
+    "C1-24",
+    "LIVE-NOTICE-01",
+    "LIVE-AUTH-01",
+    "REF-08",
+    "DEV-LOCAL-64",
+    "DEV-REG-170",
+    "DEV-REG-29",
+    "DEV-REG-47",
+    "DEV-REG-13",
+    "DEV-REG-17"
+  ],
+  "oldOnly": [],
+  "checklistScenarios": 22,
+  "finalRows": 659,
+  "originalRequestsPreserved": 111,
+  "mergedRequests": 197
+}

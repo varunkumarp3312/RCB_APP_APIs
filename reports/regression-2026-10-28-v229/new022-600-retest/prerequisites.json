@@ -1,0 +1,40 @@
+[
+  {
+    "id": 112,
+    "name": "1 · Sign in as the test player",
+    "folder": "QA 2.29 - Favourites, declaration times and Add Funds / Favourites and declared times (A1 to A18)",
+    "method": "POST",
+    "url": "https://api.rcbmatka.com/api/user-login",
+    "status": 200,
+    "expectedStatus": 200,
+    "response": "{\n  \"success\": \"1\",\n  \"message\": \"Login successful\",\n  \"token\": \"[REDACTED]\",\n  \"data\": {\n    \"id\": \"[REDACTED]\",\n    \"username\": \"[REDACTED]\",\n    \"mobile\": \"[REDACTED]\",\n    \"device_id\": \"[REDACTED]\",\n    \"credit\": 3441,\n    \"has_received_bonus\": true\n  }\n}",
+    "contentType": "application/json; charset=utf-8",
+    "durationMs": 1896,
+    "assertionOutcome": "PASS",
+    "assertionErrors": [],
+    "assertionCount": 3,
+    "expectedBusiness": null,
+    "businessOutcome": "NOT_ASSERTED",
+    "businessMessage": "",
+    "outcome": "PASS"
+  },
+  {
+    "id": 130,
+    "name": "19 · The player's user id, as Add Funds sends it",
+    "folder": "QA 2.29 - Favourites, declaration times and Add Funds / Add Funds: the QR and the PG's answers (P1 to P3)",
+    "method": "GET",
+    "url": "https://api.rcbmatka.com/api/get-profile-usser",
+    "status": 200,
+    "expectedStatus": 200,
+    "response": "{\n  \"success\": \"1\",\n  \"message\": \"Your profile, balance and app settings.\",\n  \"data\": {\n    \"bonus_qualifying_deposit\": {\n      \"amount\": 500,\n      \"order_id\": \"[REDACTED]\",\n      \"deposit_id\": \"[REDACTED]\",\n      \"at\": \"2026-06-29T12:00:40.633Z\"\n    },\n    \"_id\": \"[REDACTED]\",\n    \"app_id\": \"[REDACTED]\",\n    \"user_id\": \"[REDACTED]\",\n    \"mobile\": \"[REDACTED]\",\n    \"username\": \"[REDACTED]\",\n    \"device_id\": \"[REDACTED]\",\n    \"color\": \"green\",\n    \"inactive_reason\": \"\",\n    \"status\": \"active\",\n    \"registered_by\": \"[REDACTED]\",\n    \"has_received_bonus\": true,\n    \"credit\": 3441,\n    \"win_amount\": 520,\n    \"loss_amount\": 185,\n    \"withdraw_min\": 1,\n    \"withdraw_max\": 5000,\n    \"withdraw_per_day\": 30,\n    \"withdraw_manage\": \"no\",\n    \"main_notification\": \"on\",\n    \"game_notification\": \"on\",\n    \"kingstarline_notification\": \"on\",\n    \"kingjacport_notification\": \"on\",\n    \"total_deposit\": 1100,\n    \"total_count_deposit\": 2,\n    \"total_withdraw\": 310,\n    \"total_count_withdraw\": 3,\n    \"created_at\": \"2026-06-22T07:37:44.977Z\",\n    \"updated_at\": \"2026-10-28T09:34:29.611Z\",\n    \"__v\": 0,\n    \"last_ip\": \"[REDACTED]\",\n    \"onboard_ip\": \"\",\n    \"state\": \"[REDACTED]\",\n    \"notification_seen_at\": \"2026-10-24T09:01:38.819Z\",\n    \"bonus_qualified_at\": \"2026-10-06T08:46:41.099Z\",\n    \"referral_code\": \"RCBU5CU7\",\n    \"notification_cleared_at\": \"2026-10-24T09:01:38.819Z\",\n    \"support_assigned_at\": \"2026-10-10T15:12:44.440Z\",\n    \"support_contact_id\": \"[REDACTED]\",\n    \"google_pay\": \"9606710094\",\n    \"reseller_id\": \"[REDACTED]\",\n    \"reseller_joined_at\": \"2026-10-28T09:34:37.827Z\",\n    \"reseller_moved_at\": \"2026-10-28T09:34:37.827Z\",\n    \"reseller_moved_by\": \"[REDACTED]\",\n    \"reseller_moved_from\": \"house\",\n    \"game_rate_manage\": \"no\"\n  },\n  \"settingData\": [\n    {\n      \"_id\": \"[REDACTED]\",\n      \"max_deposit\": \"49999\",\n      \"max_withdraw\": \"5000\",\n      \"min_deposit\": \"100\",\n      \"min_withdraw\": \"1\",\n      \"per_day_withdraw_request\": \"30\",\n      \"whatsapp_Number\": \"\",\n      \"withdraw_close_time\": \"23:59\",\n      \"withdraw_enable_disable\": \"yes\",\n      \"withdraw_open_time\": \"00:00\",\n      \"home_screen_marquee\": \"Welcome TO RCB Matka No.1  TRUSTED APP . PLAY BIG WIN BIG.\",\n      \"deposit_on_off\": \"on\",\n      \"whatsapp_Number_first\": \"\",\n      \"apk_version\": \"3\",\n      \"withdraw_upi\": \"false\",\n      \"bonus_unlock_min_deposit\": 500\n    }\n  ],\n  \"bonus_locked\": 0,\n  \"withdraw_limits\": {\n    \"source\": \"app\",\n    \"min\": 1,\n    \"max\": 5000,\n    \"per_day\": 30,\n    \"open_time\": \"00:00\",\n    \"close_time\": \"23:59\",\n    \"enabled\": true\n  }\n}",
+    "contentType": "application/json; charset=utf-8",
+    "durationMs": 884,
+    "assertionOutcome": "PASS",
+    "assertionErrors": [],
+    "assertionCount": 4,
+    "expectedBusiness": null,
+    "businessOutcome": "NOT_ASSERTED",
+    "businessMessage": "",
+    "outcome": "PASS"
+  }
+]

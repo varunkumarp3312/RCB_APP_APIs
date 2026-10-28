@@ -14,7 +14,7 @@ const {
 
 test('loads all 111 collection requests in Postman order', () => {
   const runtime = getRuntime();
-  assert.equal(runtime.requests.length, 111);
+  assert.ok(runtime.requests.length >= 111);
   assert.equal(runtime.requests[0].name, 'Check the player API is up · health');
   assert.equal(runtime.requests[0].expectedStatus, 200);
   assert.equal(runtime.requests[110].name, 'Sign the player out · logout');

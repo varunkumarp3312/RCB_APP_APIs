@@ -1,6 +1,5 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const PDFDocument = require('pdfkit');
 
 function toAscii(value) {
   return String(value ?? '')
@@ -9,6 +8,7 @@ function toAscii(value) {
 }
 
 function generateReport(jsonPath, pdfPath, collectionName) {
+  const PDFDocument = require('pdfkit');
   const results = fs.existsSync(jsonPath) ? JSON.parse(fs.readFileSync(jsonPath, 'utf8')) : [];
   fs.mkdirSync(path.dirname(pdfPath), { recursive: true });
   const doc = new PDFDocument({ autoFirstPage: true, margin: 48, size: 'A4' });
@@ -22,7 +22,8 @@ function generateReport(jsonPath, pdfPath, collectionName) {
   const documentedRefusals = results.filter((result) => result.expectedBusiness?.expectedSuccess !== undefined
     && result.expectedBusiness.expectedSuccess !== '1'
     && result.businessOutcome === 'PASS').length;
-  const unsuccessfulFlags = results.filter((result) => hasUnsuccessfulSuccessFlag(result.response)).length;
+  const unsuccessfulResults = new Set(results.filter((result) => hasUnsuccessfulSuccessFlag(result.response)));
+  const unsuccessfulFlags = unsuccessfulResults.size;
   doc.font('Helvetica-Bold').fontSize(18).text('API Test Execution Report');
   doc.moveDown(0.4).font('Helvetica').fontSize(10);
   doc.text(`Collection: ${toAscii(collectionName)}`);
@@ -46,7 +47,12 @@ function generateReport(jsonPath, pdfPath, collectionName) {
     if (result.businessMessage) {
       doc.text(`Business detail: ${toAscii(result.businessMessage)}`);
     }
-    if (hasUnsuccessfulSuccessFlag(result.response)) {
+    if (result.assertionOutcome) {
+      doc.text(`Response assertions: ${result.assertionOutcome}`);
+      for (const error of result.assertionErrors || []) doc.text(toAscii(error));
+    }
+    for (const [key, value] of Object.entries(result.responseHeaders || {})) doc.text(`${key}: ${toAscii(value)}`);
+    if (unsuccessfulResults.has(result)) {
       doc.text('Business indicator: success=false/0 (informational; not asserted by the Postman collection).');
     }
     doc.text(`Duration: ${result.durationMs || 0} ms${result.contentType ? ` | Content-Type: ${toAscii(result.contentType)}` : ''}`);

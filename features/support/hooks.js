@@ -11,6 +11,8 @@ After(function () {
   }
 
   results.push(this.requestResult);
-  fs.mkdirSync(path.dirname(resultPath), { recursive: true });
+  if (results.length === 1) {
+    fs.mkdirSync(path.dirname(resultPath), { recursive: true });
+  }
   fs.writeFileSync(resultPath, `${JSON.stringify(results, null, 2)}\n`, 'utf8');
 });

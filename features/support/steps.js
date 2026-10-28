@@ -23,6 +23,8 @@ Then('the response body matches its documented business contract', function () {
   if (this.requestResult.status === 'SKIPPED') {
     return 'pending';
   }
+  assert.equal(this.requestResult.assertionOutcome, 'PASS',
+    (this.requestResult.assertionErrors || []).join('; ') || 'Response assertions did not pass.');
   if (this.requestResult.businessOutcome === 'NOT_ASSERTED') {
     return;
   }

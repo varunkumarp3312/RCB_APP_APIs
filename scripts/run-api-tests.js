@@ -23,8 +23,8 @@ function parseArguments(args) {
       index += 1;
     } else if (args[index] === '--suite') {
       options.suite = args[index + 1];
-      if (!['all', 'app', 'legacy'].includes(options.suite)) {
-        throw new Error('--suite must be one of: all, app, legacy.');
+      if (!['all', 'app', 'legacy', 'new', 'regression'].includes(options.suite)) {
+        throw new Error('--suite must be one of: all, app, legacy, new, regression.');
       }
       index += 1;
     } else if (['--collection', '--environment', '--output-dir'].includes(args[index])) {
@@ -70,6 +70,8 @@ async function main() {
   const requestNames = requests.map((request) => request.name);
   const suiteIds = requests
     .filter((request) => {
+      if (options.suite === 'new') return Boolean(request.newFeature);
+      if (options.suite === 'regression') return Boolean(request.regression);
       const isAppUsed = APP_USED_ROUTES.has(routeKey(request.method, request.url));
       return options.suite === 'all' || (options.suite === 'app' ? isAppUsed : !isAppUsed);
     })
@@ -78,7 +80,8 @@ async function main() {
   if (selectedIds.some((id) => id > requestNames.length)) {
     throw new Error(`Request ID must be between 1 and ${requestNames.length}.`);
   }
-  if (selectedIds.some((id) => !suiteIds.includes(id))) {
+  const suiteIdSet = new Set(suiteIds);
+  if (selectedIds.some((id) => !suiteIdSet.has(id))) {
     throw new Error(`A requested ID is not part of the selected "${options.suite}" suite.`);
   }
   if (new Set(selectedIds).size !== selectedIds.length) {
@@ -99,7 +102,9 @@ async function main() {
       ''
     ])
   ].join('\n');
-  fs.writeFileSync(featurePath, feature, 'utf8');
+  if (!fs.existsSync(featurePath) || fs.readFileSync(featurePath, 'utf8') !== feature) {
+    fs.writeFileSync(featurePath, feature, 'utf8');
+  }
 
   const cucumberCli = path.resolve('node_modules', '@cucumber', 'cucumber', 'bin', 'cucumber.js');
   const cucumberArgs = [
@@ -171,6 +176,8 @@ function collectRequests(items, requests) {
         id: requests.length + 1,
         name: item.name || `Request ${requests.length + 1}`,
         method: item.request.method || 'GET',
+        newFeature: item['x-qa-checklist'],
+        regression: item['x-regression'],
         url: typeof item.request.url === 'string' ? item.request.url : item.request.url?.raw || ''
       });
     }
